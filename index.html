@@ -6,12 +6,14 @@
 <title>Ali Nadir Koç</title>
 <link rel="canonical" href="https://alinadirkoc.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#14283b">
+<link rel="preload" as="image" href="rock.jpg">
+<meta name="theme-color" content="#0b1826">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alinadirkoc.com/">
 <meta property="og:title" content="Ali Nadir Koç">
-<meta property="og:description" content="Civil engineer turned strategist. CEO, Strategy &amp; Development at Arkoçlar.">
-<meta name="twitter:card" content="summary">
+<meta property="og:description" content="Civil engineer turned strategist. CEO, Strategy &amp; Development at Arkoçlar. Bağlama player.">
+<meta property="og:image" content="https://alinadirkoc.com/portrait.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0}
@@ -80,7 +82,62 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:720px){.nav{display:none}.lang{margin-left:auto}}
 
 /* hero */
-.hero{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;border-bottom:1px solid var(--rule)}
+.hero{position:relative;overflow:hidden;border-bottom:0;background:#0b1826}
+.hero::before{content:"";position:absolute;inset:0;background:url("rock.jpg") 50% 50%/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(8,18,30,.86) 0%,rgba(8,18,30,.62) 34%,rgba(8,18,30,.12) 62%,rgba(8,18,30,0) 100%),
+  linear-gradient(0deg,rgba(8,18,30,.55),transparent 35%)}
+@media (max-width:860px){.hero::after{background:linear-gradient(180deg,rgba(8,18,30,.55),rgba(8,18,30,.88) 55%)}}
+main .hero .label{color:#d2dce4}
+main .hero h1{color:#ffffff;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+main .hero .role,main .hero .hello{color:#f7c66a}
+main .hero p.lead{color:#eef3f6}
+main .hero .btn{border-color:rgba(255,255,255,.75);color:#fff}
+main .hero .btn.primary{background:#f4c464;border-color:#f4c464;color:#14283b}
+main .hero .btn.primary:hover{background:#ffd27a}
+.hero .wrap{position:relative;z-index:1}
+/* see-through bar over the photo; solid once you scroll past it */
+:root{--barh:3.3rem}
+.bar{background:rgba(9,20,32,.22);border-bottom-color:rgba(255,255,255,.12);transition:background .3s ease,border-color .3s ease}
+.bar .mark{color:#fff}
+.bar .mark span{color:#f4c464}
+.bar .nav a{color:rgba(255,255,255,.78)}
+.bar .nav a:hover{color:#fff}
+.bar .lang{border-color:rgba(255,255,255,.3)}
+.bar .lang button{color:rgba(255,255,255,.75)}
+.bar .lang button[aria-pressed="true"]{background:#f4c464;color:#14283b}
+html.scrolled .bar{background:color-mix(in srgb,var(--paper) 92%,transparent);border-bottom-color:var(--rule)}
+html.scrolled .bar .mark{color:var(--ink)}
+html.scrolled .bar .mark span{color:var(--accent-ink)}
+html.scrolled .bar .nav a{color:var(--ink-2)}
+html.scrolled .bar .nav a:hover{color:var(--ink)}
+html.scrolled .bar .lang{border-color:var(--rule)}
+html.scrolled .bar .lang button{color:var(--ink-2)}
+html.scrolled .bar .lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+body::before{background:#0b1826}
+html.scrolled body::before{background:var(--paper)}
+main .hero{margin-top:calc(-1 * var(--barh))}
+main .hero .wrap{padding-top:calc(var(--barh) + clamp(2.5rem,7vw,5.5rem))}
+/* glass title block over the photo */
+main .hero .tblock,main .hero .photocard{background:rgba(9,20,32,.42);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border:1px solid rgba(255,255,255,.18);box-shadow:0 24px 60px rgba(0,0,0,.35);color:#eef3f6}
+main .hero .tblock .row,main .hero .tblock .k,main .hero .photocard .roleline,main .hero .photocard .foot div{border-color:rgba(255,255,255,.14)}
+main .hero .tblock .foot{border-top:1px solid rgba(244,196,100,.55)}
+main .hero .tblock .k,main .hero .photocard .roleline span.k,main .hero .tblock .foot small,main .hero .photocard .foot small{color:#b9c8d4}
+main .hero .tblock .v,main .hero .photocard .roleline{color:#f4f7f9}
+main .hero .tblock .foot b,main .hero .photocard .foot b{color:#f4c464}
+main .hero .photocard .roleline{border-bottom:1px solid rgba(244,196,100,.55)}
+.photocard{background:var(--card);border:0;box-shadow:0 24px 60px rgba(0,0,0,.4);min-width:0;font-family:var(--f-mono)}
+.photocard figure{margin:0;position:relative;aspect-ratio:5/4;overflow:hidden}
+.photocard img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block}
+.photocard figcaption{position:absolute;left:.7rem;bottom:.6rem;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#f4f7f9;background:rgba(11,24,38,.55);padding:.25rem .5rem}
+.photocard .roleline{padding:.7rem .8rem;border-bottom:1px solid var(--rule);font-size:.8rem;color:var(--ink)}
+.photocard .roleline span.k{display:block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.15rem}
+.photocard .foot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.photocard .foot div{padding:.6rem .8rem;border-left:1px solid var(--rule)}
+.photocard .foot div:first-child{border-left:0}
+.photocard .foot b{display:block;font-family:var(--f-display);font-stretch:110%;font-size:1.35rem;font-weight:700;color:var(--ink)}
+.photocard .foot small{color:var(--ink-2);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.35;display:block}
+@media (max-width:860px){.photocard{max-width:420px}}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding-block:clamp(2.5rem,7vw,5.5rem) clamp(2rem,5vw,4rem);align-items:end}
 .hero h1{font-size:var(--s4);font-stretch:118%;font-weight:800;letter-spacing:-.01em;margin-top:.9rem}
 .hero .role{font-family:var(--f-display);font-stretch:100%;font-weight:500;font-size:var(--s1);color:var(--accent-ink);margin-top:.6rem}
@@ -122,6 +179,8 @@ section{padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--rule)}
 .notes ol li::before{content:counter(n) ".";font-family:var(--f-mono);font-size:.85rem;color:var(--accent-ink);padding-top:.25rem}
 .notes ol li p{margin:0}
 .notes ol li b{font-family:var(--f-display);font-weight:650;font-stretch:104%}
+.notes ol li.art{background:linear-gradient(90deg,var(--accent-soft),transparent 75%)}
+.notes ol li.art b{color:var(--accent-ink)}
 .sign{margin-top:1.4rem;font-family:var(--f-display);font-weight:600;font-style:italic;font-size:1.3rem;color:var(--accent-ink)}
 @media (max-width:820px){.notes{grid-template-columns:minmax(0,1fr)}}
 
@@ -232,26 +291,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
         <div class="label"><span lang="en">Portfolio · Business development &amp; strategy</span><span lang="tr">Portfolyo · İş geliştirme ve strateji</span></div>
         <div class="hello"><span lang="en">Hi, I'm</span><span lang="tr">Merhaba, ben</span></div>
         <h1>Ali Nadir Koç</h1>
-        <div class="role"><span lang="en">Civil engineer turned strategist</span><span lang="tr">Stratejiye geçmiş bir inşaat mühendisi</span></div>
-        <p class="lead" lang="en">I'm an engineer at heart who found his way into strategy. I built our solar plant at Arkoçlar and grew it from 100 kW to 600 kW, went to Boston and San Francisco for two master's degrees, and came back to Çanakkale as CEO for strategy and development. I still like to see the numbers before I make a call.</p>
-        <p class="lead" lang="tr">Yolu stratejiye çıkmış, özünde bir mühendisim. Arkoçlar'da güneş santralimizi kurdum ve 100 kW'tan 600 kW'a büyüttüm; Boston ve San Francisco'da iki yüksek lisans yaptıktan sonra Çanakkale'ye, strateji ve geliştirmeden sorumlu CEO olarak döndüm. Bir karar vermeden önce rakamları görmeyi hâlâ severim.</p>
+        <div class="role"><span lang="en">Civil engineer turned strategist · bağlama player</span><span lang="tr">Stratejiye geçmiş bir inşaat mühendisi · bağlama sanatçısı</span></div>
+        <p class="lead" lang="en">I'm an engineer at heart who found his way into strategy. At Arkoçlar I built our solar plant and renewed our BP station's infrastructure down to the tanks and pipelines. In between, I went to Boston and San Francisco for two master's degrees, and came back to Çanakkale as CEO for strategy and development. I still like to see the numbers before I make a call.</p>
+        <p class="lead" lang="tr">Yolu stratejiye çıkmış, özünde bir mühendisim. Arkoçlar'da güneş santralimizi kurdum, BP istasyonumuzun altyapısını tanklarına ve boru hatlarına kadar yeniledim. Arada Boston ve San Francisco'da iki yüksek lisans yaptım ve Çanakkale'ye, strateji ve geliştirmeden sorumlu CEO olarak döndüm. Bir karar vermeden önce rakamları görmeyi hâlâ severim.</p>
         <div class="cta">
           <a class="btn primary" href="#work"><span lang="en">See selected work</span><span lang="tr">Projelere göz at</span></a>
           <a class="btn" href="#about"><span lang="en">A bit about me</span><span lang="tr">Biraz ben</span></a>
         </div>
       </div>
 
-      <div class="tblock" aria-label="Profile summary">
-        <div class="row"><div class="k"><span lang="en">Current role</span><span lang="tr">Görev</span></div><div class="v"><span lang="en">CEO, Strategy &amp; Development · Arkoçlar</span><span lang="tr">CEO, Strateji ve Geliştirme · Arkoçlar</span></div></div>
-        <div class="row"><div class="k"><span lang="en">Discipline</span><span lang="tr">Alan</span></div><div class="v"><span lang="en">Business development &amp; strategy</span><span lang="tr">İş geliştirme ve strateji</span></div></div>
-        <div class="row"><div class="k"><span lang="en">Background</span><span lang="tr">Altyapı</span></div><div class="v"><span lang="en">Civil engineering, B.A.Sc.</span><span lang="tr">İnşaat mühendisliği, lisans</span></div></div>
-        <div class="row"><div class="k"><span lang="en">Degrees</span><span lang="tr">Dereceler</span></div><div class="v"><span lang="en">M.S. International Business<br>M.S. Business Analytics · Hult</span><span lang="tr">Uluslararası İşletme YL<br>İş Analitiği YL · Hult</span></div></div>
-        <div class="row"><div class="k"><span lang="en">Languages</span><span lang="tr">Diller</span></div><div class="v"><span lang="en">Turkish · English</span><span lang="tr">Türkçe · İngilizce</span></div></div>
-        <div class="row"><div class="k"><span lang="en">Sheet</span><span lang="tr">Pafta</span></div><div class="v">A-01 · REV 10/2026</div></div>
+      <div class="photocard">
+        <figure><img src="portrait.jpg" alt="Ali Nadir Koç" width="1000" height="800"><figcaption>A-01 · Ali Nadir Koç</figcaption></figure>
+        <div class="roleline"><span class="k"><span lang="en">Current role</span><span lang="tr">Görev</span></span><span lang="en">CEO, Strategy &amp; Development · Arkoçlar</span><span lang="tr">CEO, Strateji ve Geliştirme · Arkoçlar</span></div>
         <div class="foot">
-          <div><b>600 kW</b><small><span lang="en">Solar capacity</span><span lang="tr">Güneş kapasitesi</span></small></div>
+          <div><b>2019</b><small><span lang="en">In the field since</span><span lang="tr">Sahada, şu yıldan beri</span></small></div>
           <div><b>2</b><small><span lang="en">Master's degrees</span><span lang="tr">Yüksek lisans</span></small></div>
-          <div><b>10</b><small><span lang="en">Projects below</span><span lang="tr">Proje</span></small></div>
+          <div><b>11</b><small><span lang="en">Projects below</span><span lang="tr">Proje</span></small></div>
         </div>
       </div>
     </div>
@@ -269,9 +324,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
       </div>
       <div>
         <ol>
-          <li><p lang="en"><b>I'm an engineer first.</b> I like projects you can stand next to, like a solar plant that started at 100 kW and now runs at 600 kW.</p><p lang="tr"><b>Önce mühendisim.</b> Yanında durabileceğin projeleri severim; 100 kW ile başlayıp bugün 600 kW'a ulaşan bir güneş santrali gibi.</p></li>
+          <li><p lang="en"><b>I'm an engineer first.</b> I like projects you can stand next to, like a fuel station we renewed down to its tanks and pipelines.</p><p lang="tr"><b>Önce mühendisim.</b> Yanında durabileceğin projeleri severim; tanklarına ve boru hatlarına kadar yenilediğimiz bir istasyon gibi.</p></li>
           <li><p lang="en"><b>I went back to school on purpose.</b> After two years in the field, two master's degrees at Hult taught me to back a decision with data, not just instinct.</p><p lang="tr"><b>Okula bilerek geri döndüm.</b> Sahada geçen iki yılın ardından Hult'taki iki yüksek lisans, bir kararı sadece sezgiyle değil veriyle de desteklemeyi öğretti.</p></li>
-          <li><p lang="en"><b>I like to see the numbers.</b> Before a big call I open SQL, Python or Tableau and look for what the data says.</p><p lang="tr"><b>Rakamları görmeyi severim.</b> Büyük bir karardan önce SQL, Python ya da Tableau'yu açıp verinin ne söylediğine bakarım.</p></li>
+          <li><p lang="en"><b>I like to see the numbers.</b> Before a big call I open SQL, Python, R or Tableau and look for what the data says.</p><p lang="tr"><b>Rakamları görmeyi severim.</b> Büyük bir karardan önce SQL, Python, R ya da Tableau'yu açıp verinin ne söylediğine bakarım.</p></li>
+          <li class="art"><p lang="en"><b>I'm also a musician.</b> I play the bağlama, the long-necked lute at the heart of Turkish folk music, professionally. The engineer, the strategist and the artist are the same person.</p><p lang="tr"><b>Bir yanım da sanatçı.</b> Profesyonel olarak bağlama çalıyorum. Mühendis, stratejist ve sanatçı aynı kişi.</p></li>
           <li><p lang="en"><b>Before strategy, there was the wind.</b> I kiteboarded and windsurfed at PWA World Tour events in Alaçatı, Datça and Istanbul, played tennis through university and chess for my school team.</p><p lang="tr"><b>Stratejiden önce rüzgâr vardı.</b> PWA Dünya Turu'nun Alaçatı, Datça ve İstanbul etaplarında kiteboard ve windsurf yaptım, üniversite boyunca tenis, okul takımında satranç oynadım.</p></li>
         </ol>
         <div class="sign">— Ali</div>
@@ -284,8 +340,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
       <div class="head">
         <span class="sheet">A-03</span>
         <h2><span lang="en">Selected work</span><span lang="tr">Seçilmiş projeler</span></h2>
-        <p lang="en">Strategy, investment and data projects from Hult's International Business and Business Analytics programs.</p>
-        <p lang="tr">Hult'taki Uluslararası İşletme ve İş Analitiği programlarından strateji, yatırım ve veri projeleri.</p>
+        <p lang="en">From our own fuel station to Hult's classrooms: field, strategy, investment and data projects.</p>
+        <p lang="tr">Kendi istasyonumuzdan Hult'un sınıflarına: saha, strateji, yatırım ve veri projeleri.</p>
       </div>
 
       <article class="feature">
@@ -319,6 +375,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
       </article>
 
       <div class="legend" aria-label="Code legend">
+        <span><b>FLD</b> <span lang="en">field project</span><span lang="tr">saha projesi</span></span>
         <span><b>STR</b> <span lang="en">strategy &amp; market entry</span><span lang="tr">strateji ve pazara giriş</span></span>
         <span><b>INV</b> <span lang="en">investment analysis</span><span lang="tr">yatırım analizi</span></span>
         <span><b>DAT</b> <span lang="en">data &amp; analytics</span><span lang="tr">veri ve analitik</span></span>
@@ -326,63 +383,70 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
 
       <ol class="register">
         <li>
-          <span class="code">INV-02</span>
+          <span class="code">FLD-02</span>
+          <h3><span lang="en">BP station infrastructure renewal</span><span lang="tr">BP istasyonu altyapı yenilemesi</span></h3>
+          <p lang="en">2023. Complete renewal of the BP station's infrastructure: fuel tanks, pipelines, pumps and forecourt concrete, from planning to handover.</p>
+          <p lang="tr">2023. BP istasyonunun tüm altyapısının yenilenmesi: yakıt tankları, boru hatları, pompalar ve saha betonu; planlamadan teslime kadar.</p>
+          <span class="tools"><span lang="en">Site management · Mechanical systems · Arkoçlar</span><span lang="tr">Saha yönetimi · Mekanik tesisat · Arkoçlar</span></span>
+        </li>
+        <li>
+          <span class="code">INV-03</span>
           <h3>DoorDash vs. Uber</h3>
           <p lang="en">Compared annual growth of 105.87% against 36.22% and DoorDash's expansion through Wolt. Recommended DoorDash.</p>
           <p lang="tr">Yıllık %105,87 ile %36,22 büyümeyi ve DoorDash'in Wolt üzerinden genişlemesini karşılaştırdım. DoorDash'i önerdim.</p>
           <span class="tools">PitchBook · WSJ · Excel</span>
         </li>
         <li>
-          <span class="code">INV-03</span>
+          <span class="code">INV-04</span>
           <h3>Ally Financial vs. PayPal</h3>
           <p lang="en">Recommended Ally after a 20% dividend increase and a $2B share buyback, while PayPal fell 30% in three months.</p>
           <p lang="tr">Ally'nin %20 temettü artışı ve 2 milyar $'lık hisse geri alımına karşılık PayPal'ın üç ayda %30 düşüşü nedeniyle Ally'yi önerdim.</p>
           <span class="tools">WSJ · <span lang="en">stock price analysis</span><span lang="tr">hisse fiyatı analizi</span></span>
         </li>
         <li>
-          <span class="code">STR-04</span>
+          <span class="code">STR-05</span>
           <h3>Zomato</h3>
           <p lang="en">Blue Ocean analysis of how delivery cleared access and cultural barriers to restaurant food in India, plus a competitor and strengths review.</p>
           <p lang="tr">Teslimatın Hindistan'da restoran yemeğine erişimdeki ulaşım ve kültürel engelleri nasıl kaldırdığının Mavi Okyanus analizi; rakip ve güçlü yön değerlendirmesi.</p>
           <span class="tools">Blue Ocean · <span lang="en">competitive analysis</span><span lang="tr">rekabet analizi</span></span>
         </li>
         <li>
-          <span class="code">STR-05</span>
+          <span class="code">STR-06</span>
           <h3><span lang="en">Stitch Fix: Malaysia &amp; Singapore</span><span lang="tr">Stitch Fix: Malezya ve Singapur</span></h3>
           <p lang="en">Market-entry plan covering market size, competitors, online clothing demand, revenue model and regression on training data.</p>
           <p lang="tr">Pazar büyüklüğü, rakipler, online giyim talebi, gelir modeli ve regresyon analizini kapsayan pazara giriş planı.</p>
           <span class="tools">ERRC · SWOT · BCG · <span lang="en">regression</span><span lang="tr">regresyon</span></span>
         </li>
         <li>
-          <span class="code">STR-06</span>
+          <span class="code">STR-07</span>
           <h3>Kindle</h3>
           <p lang="en">5C marketing analysis: customer profile, the subscription advantage, competitors and collaborators in the e-reader market.</p>
           <p lang="tr">5C pazarlama analizi: müşteri profili, abonelik avantajı, e-okuyucu pazarındaki rakipler ve iş ortakları.</p>
           <span class="tools">5C · Statista</span>
         </li>
         <li>
-          <span class="code">STR-07</span>
+          <span class="code">STR-08</span>
           <h3>Getir</h3>
           <p lang="en">Business model canvas for the quick-commerce grocery delivery company.</p>
           <p lang="tr">Hızlı market teslimatı şirketi için iş modeli kanvası.</p>
           <span class="tools">Business Model Canvas</span>
         </li>
         <li>
-          <span class="code">DAT-08</span>
+          <span class="code">DAT-09</span>
           <h3><span lang="en">Whole Foods pricing</span><span lang="tr">Whole Foods fiyat analizi</span></h3>
           <p lang="en">Measured the price premium per 100 calories for gluten-free, keto and vegan products. Recommended expanding these lines under the private 365 brand.</p>
           <p lang="tr">Glutensiz, keto ve vegan ürünlerin 100 kalori başına fiyat primini ölçtüm. Bu ürünlerin 365 markası altında genişletilmesini önerdim.</p>
           <span class="tools">SQL · t-test · Excel</span>
         </li>
         <li>
-          <span class="code">DAT-09</span>
+          <span class="code">DAT-10</span>
           <h3><span lang="en">Portfolio risk analysis</span><span lang="tr">Portföy risk analizi</span></h3>
           <p lang="en">Returns, volatility and risk-adjusted return per ticker, plus each holding's weight and risk contribution in a client portfolio.</p>
           <p lang="tr">Hisse başına getiri, volatilite ve riske göre düzeltilmiş getiri; bir müşteri portföyünde her varlığın ağırlığı ve risk katkısı.</p>
           <span class="tools">MySQL · CTE · <span lang="en">window functions</span><span lang="tr">pencere fonksiyonları</span></span>
         </li>
         <li>
-          <span class="code">DAT-10</span>
+          <span class="code">DAT-11</span>
           <h3><span lang="en">SuperStore executive dashboard</span><span lang="tr">SuperStore yönetici paneli</span></h3>
           <p lang="en">Found the loss-making cities in Texas, Illinois and Colorado and tied the losses to heavy discounting. Recommended targeted campaigns and lower discount rates.</p>
           <p lang="tr">Texas, Illinois ve Colorado'da zarar eden şehirleri bulup zararı yüksek indirimlere bağladım. Hedefli kampanyalar ve daha düşük indirim oranları önerdim.</p>
@@ -410,9 +474,24 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
               <li>Oversee fuel station and convenience store operations, staffing and monthly financial reporting.</li>
             </ul>
             <ul lang="tr">
-              <li>İnşaat, enerji ve akaryakıt perakendeciliği alanlarında şirket stratejisini ve geliştirme faaliyetlerini yönetiyorum.</li>
-              <li>Şebekeye bağlı güneş enerjisi santralini 100 kW'tan 600 kW'a genişlettim.</li>
-              <li>Akaryakıt istasyonu ve market operasyonlarını, personeli ve aylık finansal raporlamayı denetliyorum.</li>
+              <li>İnşaat, enerji ve akaryakıt perakendeciliği alanlarında şirket stratejisi ve geliştirme faaliyetlerinin yönetimi.</li>
+              <li>Şebekeye bağlı güneş enerjisi santralinin 100 kW'tan 600 kW'a genişletilmesi.</li>
+              <li>Akaryakıt istasyonu ve market operasyonlarının, personelin ve aylık finansal raporlamanın denetimi.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2023</div>
+          <div>
+            <h3><span lang="en">Project Lead, BP Station Infrastructure Renewal</span><span lang="tr">Proje Lideri, BP İstasyonu Altyapı Yenilemesi</span></h3>
+            <div class="org"><span lang="en">Arkoçlar · Çanakkale</span><span lang="tr">Arkoçlar · Çanakkale</span></div>
+            <ul lang="en">
+              <li>Complete renewal of the station's infrastructure: fuel tanks, pipelines, pumps and forecourt concrete.</li>
+              <li>Day-to-day operation of the station taken over on completion.</li>
+            </ul>
+            <ul lang="tr">
+              <li>İstasyonun tüm altyapısının yenilenmesi: yakıt tankları, boru hatları, pompalar ve saha betonu.</li>
+              <li>Tamamlanmasının ardından istasyon işletmesinin devralınması.</li>
             </ul>
           </div>
         </li>
@@ -437,10 +516,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
               <li>Tracked weekly, monthly and quarterly sales metrics and kept the CRM up to date.</li>
             </ul>
             <ul lang="tr">
-              <li>100 kW'lık şebekeye bağlı güneş enerjisi sistemini tasarladım ve kurulumunu yönettim.</li>
-              <li>LPG otogaz istasyonu ve dolum tesisinin sorumlu müdürlüğünü yaptım: düzenli güvenlik kontrolleri ve Makine Mühendisleri Odası süreçleri.</li>
-              <li>Uzun vadeli büyüme stratejisini belirledim; potansiyel müşteri araştırması ve sözleşme müzakereleri yürüttüm.</li>
-              <li>Haftalık, aylık ve çeyreklik satış metriklerini takip ettim, CRM'i güncel tuttum.</li>
+              <li>100 kW'lık şebekeye bağlı güneş enerjisi sisteminin tasarımı ve kurulum yönetimi.</li>
+              <li>LPG otogaz istasyonu ve dolum tesisinin sorumlu müdürlüğü: düzenli güvenlik kontrolleri ve Makine Mühendisleri Odası süreçleri.</li>
+              <li>Uzun vadeli büyüme stratejisinin belirlenmesi; potansiyel müşteri araştırması ve sözleşme müzakereleri.</li>
+              <li>Haftalık, aylık ve çeyreklik satış metriklerinin takibi ve CRM yönetimi.</li>
             </ul>
           </div>
         </li>
@@ -571,6 +650,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
     else if ((navigator.language || '').toLowerCase().indexOf('tr') === 0) initial = 'tr';
   }
   setLang(initial, false);
+  var heroEl = document.querySelector('.hero');
+  function onScroll(){ var lim = heroEl ? heroEl.offsetHeight - 60 : 200; root.classList.toggle('scrolled', window.scrollY > lim); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
   btns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.dataset.set, true); }); });
 
   var copyBtn = document.getElementById('copy-email');
