@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ali Nadir Koç</title>
+<link rel="canonical" href="https://alinadirkoc.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#14283b">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alinadirkoc.com/">
+<meta property="og:title" content="Ali Nadir Koç">
+<meta property="og:description" content="Civil engineer turned strategist. CEO, Strategy &amp; Development at Arkoçlar.">
+<meta name="twitter:card" content="summary">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<meta name="description" content="Ali Nadir Koç: business development and strategy. Civil engineer with M.S. degrees in International Business and Business Analytics from Hult.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: an engineer's drawing sheet turned portfolio. Title-block hero on graph paper,
+   a coded project register (STR / INV / DAT), then experience, education, skills, contact. */
+:root{
+  --paper:#f2f5f7; --paper-2:#e6ebee; --card:#fbfcfd;
+  --ink:#14283b; --ink-2:#4b5d6e; --rule:#c6d0d8; --grid:rgba(20,40,59,.06);
+  --accent:#c98a10; --accent-ink:#8a5a00; --accent-soft:rgba(201,138,16,.14);
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --s-1:.8125rem; --s0:1.0625rem; --s1:1.3rem; --s2:1.75rem; --s3:2.5rem; --s4:clamp(2.6rem,7vw,5.2rem);
+  --max:1120px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1a25; --paper-2:#152433; --card:#132130;
+    --ink:#e4ebf1; --ink-2:#9db0c0; --rule:#2b3f52; --grid:rgba(228,235,241,.05);
+    --accent:#f0b23a; --accent-ink:#f4c464; --accent-soft:rgba(240,178,58,.14);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1a25; --paper-2:#152433; --card:#132130;
+  --ink:#e4ebf1; --ink-2:#9db0c0; --rule:#2b3f52; --grid:rgba(228,235,241,.05);
+  --accent:#f0b23a; --accent-ink:#f4c464; --accent-soft:rgba(240,178,58,.14);
+  color-scheme:dark;
+}
+
+/* language switch */
+html:not([data-lang="tr"]) [lang="tr"]{display:none!important}
+html[data-lang="tr"] [lang="en"]{display:none!important}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--s0);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:var(--s-1);letter-spacing:.04em}
+.label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05}
+
+/* top bar */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.bar .wrap{display:flex;align-items:center;gap:1rem;padding-block:.7rem}
+.mark{font-family:var(--f-display);font-stretch:125%;font-weight:800;letter-spacing:.02em;text-decoration:none;font-size:1rem}
+.mark span{color:var(--accent-ink)}
+.nav{display:flex;gap:1.1rem;margin-left:auto;flex-wrap:wrap}
+.nav a{font-family:var(--f-mono);font-size:.78rem;text-decoration:none;color:var(--ink-2)}
+.nav a:hover{color:var(--ink)}
+.lang{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px}
+.lang button{font:500 .72rem var(--f-mono);letter-spacing:.08em;border:0;background:transparent;color:var(--ink-2);padding:.3rem .6rem;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+@media (max-width:720px){.nav{display:none}.lang{margin-left:auto}}
+
+/* hero */
+.hero{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;border-bottom:1px solid var(--rule)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding-block:clamp(2.5rem,7vw,5.5rem) clamp(2rem,5vw,4rem);align-items:end}
+.hero h1{font-size:var(--s4);font-stretch:118%;font-weight:800;letter-spacing:-.01em;margin-top:.9rem}
+.hero .role{font-family:var(--f-display);font-stretch:100%;font-weight:500;font-size:var(--s1);color:var(--accent-ink);margin-top:.6rem}
+.hero p.lead{max-width:60ch;margin:1.2rem 0 0;font-size:1.15rem;color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.btn{font-family:var(--f-display);font-weight:600;font-size:.95rem;text-decoration:none;padding:.7rem 1.1rem;border:1.5px solid var(--ink);border-radius:3px}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{border-color:var(--accent);}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent);color:#14283b}
+
+/* title block: the drawing-sheet stamp */
+.tblock{border:1.5px solid var(--ink);background:var(--card);font-family:var(--f-mono);font-size:.8rem;min-width:0}
+.tblock .row{display:grid;grid-template-columns:8.5rem minmax(0,1fr);border-top:1px solid var(--rule)}
+.tblock .row:first-child{border-top:0}
+.tblock .k{padding:.55rem .7rem;color:var(--ink-2);letter-spacing:.1em;text-transform:uppercase;font-size:.66rem;border-right:1px solid var(--rule)}
+.tblock .v{padding:.55rem .7rem;color:var(--ink)}
+.tblock .foot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1.5px solid var(--ink)}
+.tblock .foot div{padding:.55rem .7rem;border-left:1px solid var(--rule)}
+.tblock .foot div:first-child{border-left:0}
+.tblock .foot b{display:block;font-family:var(--f-display);font-stretch:110%;font-size:1.35rem;font-weight:700;color:var(--ink);letter-spacing:0}
+.tblock .foot small{color:var(--ink-2);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.35;display:block}
+@media (max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr);align-items:start}}
+@media (max-width:420px){.tblock .row{grid-template-columns:6.6rem minmax(0,1fr)}}
+
+/* sections */
+section{padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--rule)}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1.2rem;margin-bottom:2rem}
+.head h2{font-size:var(--s3);font-stretch:112%;font-weight:750}
+.head p{margin:0;color:var(--ink-2);max-width:56ch;flex-basis:100%}
+.sheet{font-family:var(--f-mono);font-size:.72rem;color:var(--accent-ink);letter-spacing:.12em}
+
+/* hello + notes (warmer layer) */
+.hello{font-family:var(--f-display);font-weight:600;font-size:var(--s1);color:var(--accent-ink);margin-top:.9rem}
+.hello + h1{margin-top:.1rem}
+.notes{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(1.5rem,5vw,4rem);align-items:start}
+.notes .intro{font-size:1.15rem;margin:1rem 0 0;max-width:40ch}
+.notes ol{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink);counter-reset:n}
+.notes ol li{counter-increment:n;display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:1rem;padding:1.05rem 0;border-bottom:1px solid var(--rule)}
+.notes ol li::before{content:counter(n) ".";font-family:var(--f-mono);font-size:.85rem;color:var(--accent-ink);padding-top:.25rem}
+.notes ol li p{margin:0}
+.notes ol li b{font-family:var(--f-display);font-weight:650;font-stretch:104%}
+.sign{margin-top:1.4rem;font-family:var(--f-display);font-weight:600;font-style:italic;font-size:1.3rem;color:var(--accent-ink)}
+@media (max-width:820px){.notes{grid-template-columns:minmax(0,1fr)}}
+
+/* featured project */
+.feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3rem);background:var(--card);border:1px solid var(--rule);padding:clamp(1.25rem,3vw,2.25rem);margin-bottom:2.5rem}
+.feature h3{font-size:var(--s2);font-stretch:108%;font-weight:700;margin:.5rem 0 .2rem}
+.feature .meta{color:var(--ink-2);font-size:.95rem}
+.feature p{margin:.9rem 0 0;max-width:62ch}
+.flow{list-style:none;margin:0;padding:0;display:grid;gap:.6rem;align-content:start}
+.flow li{border:1px solid var(--rule);background:var(--paper);padding:.7rem .85rem;position:relative;min-width:0}
+.flow li .label{display:block;margin-bottom:.15rem}
+.flow li b{font-family:var(--f-display);font-weight:600;font-size:1rem}
+.flow li:not(.split)::after{content:"";position:absolute;left:1.4rem;bottom:-.62rem;width:1.5px;height:.6rem;background:var(--accent)}
+.flow li.split{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;border:0;background:transparent;padding:0}
+.flow li.split div{border:1px solid var(--rule);background:var(--paper);padding:.7rem .85rem;min-width:0}
+.flow li.split div.pass{border-color:var(--accent);background:var(--accent-soft)}
+.specs{width:100%;border-collapse:collapse;margin-top:1.1rem;font-family:var(--f-mono);font-size:.8rem;font-variant-numeric:tabular-nums}
+.specs th,.specs td{text-align:left;padding:.45rem .5rem;border-top:1px solid var(--rule)}
+.specs th{font-weight:500;color:var(--ink-2);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.feature p.specnote{margin:.7rem 0 0;font-size:.85rem;color:var(--ink-2);font-style:italic;border-left:2px solid var(--accent);padding-left:.7rem}
+@media (max-width:820px){.feature{grid-template-columns:minmax(0,1fr)}}
+
+/* register */
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;margin:-1rem 0 1.2rem}
+.legend span{font-family:var(--f-mono);font-size:.74rem;color:var(--ink-2)}
+.legend b{color:var(--ink);font-weight:500}
+.register{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)}
+.register li{display:grid;grid-template-columns:5.2rem minmax(0,1.1fr) minmax(0,1.6fr) minmax(0,.9fr);gap:.4rem 1.4rem;padding:1.05rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.register .code{font-family:var(--f-mono);font-size:.78rem;color:var(--accent-ink);font-weight:500}
+.register h3{font-size:1.12rem;font-weight:650;font-stretch:104%;line-height:1.25}
+.register p{margin:0;color:var(--ink);font-size:.98rem}
+.register .tools{font-family:var(--f-mono);font-size:.74rem;color:var(--ink-2)}
+@media (max-width:820px){
+  .register li{grid-template-columns:4.4rem minmax(0,1fr)}
+  .register li p,.register li .tools{grid-column:2}
+}
+
+/* experience timeline */
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.timeline li{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:1.5rem;padding:1.4rem 0;border-top:1px solid var(--rule)}
+.timeline li:first-child{border-top:1.5px solid var(--ink)}
+.timeline .when{font-family:var(--f-mono);font-size:.8rem;color:var(--ink-2);font-variant-numeric:tabular-nums;padding-top:.2rem}
+.timeline h3{font-size:1.3rem;font-weight:700;font-stretch:106%}
+.timeline .org{color:var(--accent-ink);font-family:var(--f-display);font-weight:500;margin-top:.2rem}
+.timeline ul{margin:.7rem 0 0;padding-left:1.1rem;max-width:68ch}
+.timeline ul li{display:list-item;padding:0;border:0;margin:.25rem 0}
+.timeline li.key{background:linear-gradient(90deg,var(--accent-soft),transparent 70%)}
+.timeline li.study h3{font-size:1.1rem;color:var(--ink-2)}
+.timeline .note{margin:.6rem 0 0;color:var(--ink-2);font-size:.95rem}
+@media (max-width:640px){.timeline li{grid-template-columns:minmax(0,1fr);gap:.4rem}}
+
+/* education + skills */
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.edu{border-top:1.5px solid var(--ink);padding-top:1rem;min-width:0}
+.edu h3{font-size:1.15rem;font-weight:700;font-stretch:104%;line-height:1.25;margin-top:.4rem}
+.edu .org{color:var(--ink-2);margin-top:.3rem;font-size:.95rem}
+.edu p{margin:.7rem 0 0;font-size:.95rem}
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.skills div{min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
+.chips span{font-family:var(--f-mono);font-size:.74rem;border:1px solid var(--rule);padding:.25rem .5rem;border-radius:2px;background:var(--card)}
+.certs{margin-top:2.5rem;border-top:1.5px solid var(--ink)}
+.certs li{list-style:none;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.certs ul{margin:0;padding:0}
+.certs .mono{color:var(--ink-2)}
+@media (max-width:820px){.cols,.skills{grid-template-columns:minmax(0,1fr)}}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper);border-bottom:0}
+.contact .label{color:color-mix(in srgb,var(--paper) 70%,var(--ink))}
+.contact h2{font-size:var(--s3);font-stretch:112%;font-weight:750;max-width:18ch}
+.contact .grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:2rem;align-items:end}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1.4rem}
+.mail code{font-family:var(--f-mono);font-size:clamp(.95rem,2.6vw,1.2rem);user-select:all;word-break:break-all;border-bottom:1.5px solid var(--accent);padding-bottom:.1rem}
+.mail button,.contact .li{font:500 .78rem var(--f-mono);letter-spacing:.06em;background:transparent;color:var(--paper);border:1px solid color-mix(in srgb,var(--paper) 45%,var(--ink));padding:.45rem .75rem;border-radius:3px;cursor:pointer;text-decoration:none}
+.mail button:hover,.contact .li:hover{border-color:var(--accent);background:color-mix(in srgb,var(--paper) 10%,var(--ink))}
+.off{font-size:.98rem;color:color-mix(in srgb,var(--paper) 82%,var(--ink));max-width:46ch}
+.off b{color:var(--paper);font-weight:600}
+@media (max-width:820px){.contact .grid{grid-template-columns:minmax(0,1fr)}}
+footer{background:var(--ink);color:color-mix(in srgb,var(--paper) 60%,var(--ink));border-top:1px solid color-mix(in srgb,var(--paper) 15%,var(--ink))}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;padding-block:1.1rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top">A<span>N</span>K</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about"><span lang="en">About</span><span lang="tr">Hakkımda</span></a>
+      <a href="#work"><span lang="en">Work</span><span lang="tr">Projeler</span></a>
+      <a href="#experience"><span lang="en">Experience</span><span lang="tr">Deneyim</span></a>
+      <a href="#education"><span lang="en">Education</span><span lang="tr">Eğitim</span></a>
+      <a href="#skills"><span lang="en">Skills</span><span lang="tr">Yetkinlikler</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Dil">
+      <button type="button" id="btn-en" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" id="btn-tr" data-set="tr" aria-pressed="false">TR</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="label"><span lang="en">Portfolio · Business development &amp; strategy</span><span lang="tr">Portfolyo · İş geliştirme ve strateji</span></div>
+        <div class="hello"><span lang="en">Hi, I'm</span><span lang="tr">Merhaba, ben</span></div>
+        <h1>Ali Nadir Koç</h1>
+        <div class="role"><span lang="en">Civil engineer turned strategist</span><span lang="tr">Stratejiye geçmiş bir inşaat mühendisi</span></div>
+        <p class="lead" lang="en">I'm an engineer at heart who found his way into strategy. I built our solar plant at Arkoçlar and grew it from 100 kW to 600 kW, went to Boston and San Francisco for two master's degrees, and came back to Çanakkale as CEO for strategy and development. I still like to see the numbers before I make a call.</p>
+        <p class="lead" lang="tr">Yolu stratejiye çıkmış, özünde bir mühendisim. Arkoçlar'da güneş santralimizi kurdum ve 100 kW'tan 600 kW'a büyüttüm; Boston ve San Francisco'da iki yüksek lisans yaptıktan sonra Çanakkale'ye, strateji ve geliştirmeden sorumlu CEO olarak döndüm. Bir karar vermeden önce rakamları görmeyi hâlâ severim.</p>
+        <div class="cta">
+          <a class="btn primary" href="#work"><span lang="en">See selected work</span><span lang="tr">Projelere göz at</span></a>
+          <a class="btn" href="#about"><span lang="en">A bit about me</span><span lang="tr">Biraz ben</span></a>
+        </div>
+      </div>
+
+      <div class="tblock" aria-label="Profile summary">
+        <div class="row"><div class="k"><span lang="en">Current role</span><span lang="tr">Görev</span></div><div class="v"><span lang="en">CEO, Strategy &amp; Development · Arkoçlar</span><span lang="tr">CEO, Strateji ve Geliştirme · Arkoçlar</span></div></div>
+        <div class="row"><div class="k"><span lang="en">Discipline</span><span lang="tr">Alan</span></div><div class="v"><span lang="en">Business development &amp; strategy</span><span lang="tr">İş geliştirme ve strateji</span></div></div>
+        <div class="row"><div class="k"><span lang="en">Background</span><span lang="tr">Altyapı</span></div><div class="v"><span lang="en">Civil engineering, B.A.Sc.</span><span lang="tr">İnşaat mühendisliği, lisans</span></div></div>
+        <div class="row"><div class="k"><span lang="en">Degrees</span><span lang="tr">Dereceler</span></div><div class="v"><span lang="en">M.S. International Business<br>M.S. Business Analytics · Hult</span><span lang="tr">Uluslararası İşletme YL<br>İş Analitiği YL · Hult</span></div></div>
+        <div class="row"><div class="k"><span lang="en">Languages</span><span lang="tr">Diller</span></div><div class="v"><span lang="en">Turkish · English</span><span lang="tr">Türkçe · İngilizce</span></div></div>
+        <div class="row"><div class="k"><span lang="en">Sheet</span><span lang="tr">Pafta</span></div><div class="v">A-01 · REV 10/2026</div></div>
+        <div class="foot">
+          <div><b>600 kW</b><small><span lang="en">Solar capacity</span><span lang="tr">Güneş kapasitesi</span></small></div>
+          <div><b>2</b><small><span lang="en">Master's degrees</span><span lang="tr">Yüksek lisans</span></small></div>
+          <div><b>10</b><small><span lang="en">Projects below</span><span lang="tr">Proje</span></small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap notes">
+      <div>
+        <div class="head" style="margin-bottom:0">
+          <span class="sheet">A-02</span>
+          <h2><span lang="en">A few notes about me</span><span lang="tr">Benim hakkımda birkaç not</span></h2>
+        </div>
+        <p class="intro" lang="en">Every drawing sheet has a box of general notes, the things you should know before you read the rest. Here are mine.</p>
+        <p class="intro" lang="tr">Her paftada bir genel notlar kutusu vardır: geri kalanını okumadan önce bilmen gerekenler. Bunlar da benimkiler.</p>
+      </div>
+      <div>
+        <ol>
+          <li><p lang="en"><b>I'm an engineer first.</b> I like projects you can stand next to, like a solar plant that started at 100 kW and now runs at 600 kW.</p><p lang="tr"><b>Önce mühendisim.</b> Yanında durabileceğin projeleri severim; 100 kW ile başlayıp bugün 600 kW'a ulaşan bir güneş santrali gibi.</p></li>
+          <li><p lang="en"><b>I went back to school on purpose.</b> After two years in the field, two master's degrees at Hult taught me to back a decision with data, not just instinct.</p><p lang="tr"><b>Okula bilerek geri döndüm.</b> Sahada geçen iki yılın ardından Hult'taki iki yüksek lisans, bir kararı sadece sezgiyle değil veriyle de desteklemeyi öğretti.</p></li>
+          <li><p lang="en"><b>I like to see the numbers.</b> Before a big call I open SQL, Python or Tableau and look for what the data says.</p><p lang="tr"><b>Rakamları görmeyi severim.</b> Büyük bir karardan önce SQL, Python ya da Tableau'yu açıp verinin ne söylediğine bakarım.</p></li>
+          <li><p lang="en"><b>Before strategy, there was the wind.</b> I kiteboarded and windsurfed at PWA World Tour events in Alaçatı, Datça and Istanbul, played tennis through university and chess for my school team.</p><p lang="tr"><b>Stratejiden önce rüzgâr vardı.</b> PWA Dünya Turu'nun Alaçatı, Datça ve İstanbul etaplarında kiteboard ve windsurf yaptım, üniversite boyunca tenis, okul takımında satranç oynadım.</p></li>
+        </ol>
+        <div class="sign">— Ali</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head">
+        <span class="sheet">A-03</span>
+        <h2><span lang="en">Selected work</span><span lang="tr">Seçilmiş projeler</span></h2>
+        <p lang="en">Strategy, investment and data projects from Hult's International Business and Business Analytics programs.</p>
+        <p lang="tr">Hult'taki Uluslararası İşletme ve İş Analitiği programlarından strateji, yatırım ve veri projeleri.</p>
+      </div>
+
+      <article class="feature">
+        <div>
+          <span class="label">STR-01 · <span lang="en">Featured</span><span lang="tr">Öne çıkan</span></span>
+          <h3>Batt2Life</h3>
+          <div class="meta"><span lang="en">Second-life EV batteries for solar storage · Hult MIB · team of 6 · 2022</span><span lang="tr">Elektrikli araç pillerine ikinci hayat · Hult MIB · 6 kişilik takım · 2022</span></div>
+          <p lang="en">EV batteries are replaced once they drop to about 80% capacity, which will leave a growing supply of discarded packs. Batt2Life tests and reconfigures them into affordable storage for homes and communities running on solar, and sends the packs that fail to raw-material recycling.</p>
+          <p lang="tr">Elektrikli araç pilleri kapasiteleri yaklaşık %80'e düştüğünde değiştiriliyor ve bu da giderek büyüyen bir kullanılmış pil arzı yaratıyor. Batt2Life bu pilleri test edip yeniden yapılandırarak güneş enerjisiyle çalışan ev ve topluluklar için uygun fiyatlı depolamaya dönüştürüyor; testi geçemeyenleri ham madde geri dönüşümüne gönderiyor.</p>
+          <p lang="en">We built the trend matrix and research plan, analyzed South Africa's market and regulations, wrote the 4P/5C marketing plan, and outlined B2B entry with automotive suppliers in Bursa and İzmir.</p>
+          <p lang="tr">Trend matrisini ve araştırma planını hazırladık, Güney Afrika pazarını ve mevzuatını inceledik, 4P/5C pazarlama planını yazdık ve Bursa ile İzmir'deki otomotiv tedarikçilerine yönelik B2B giriş planını çıkardık.</p>
+          <table class="specs">
+            <thead><tr><th><span lang="en">Pack</span><span lang="tr">Paket</span></th><th><span lang="en">Target price</span><span lang="tr">Hedef fiyat</span></th><th><span lang="en">Customer</span><span lang="tr">Müşteri</span></th></tr></thead>
+            <tbody>
+              <tr><td>3 kWh</td><td>$400</td><td rowspan="3"><span lang="en">Households, communities, B2B</span><span lang="tr">Haneler, topluluklar, B2B</span></td></tr>
+              <tr><td>5 kWh</td><td>$600</td></tr>
+              <tr><td>10 kWh</td><td>$1,000</td></tr>
+            </tbody>
+          </table>
+          <p class="specnote" lang="en">Target prices are from our 2022 business plan. Battery costs have fallen since, so the same packs would likely be priced lower today.</p>
+          <p class="specnote" lang="tr">Hedef fiyatlar 2022 iş planımıza aittir. Pil maliyetleri o zamandan bu yana düştü; aynı paketler bugün büyük ihtimalle daha düşük fiyatlanırdı.</p>
+        </div>
+        <ol class="flow" aria-label="Batt2Life process">
+          <li><span class="label">01 · <span lang="en">Supply</span><span lang="tr">Tedarik</span></span><b><span lang="en">Retired EV battery, ~80% capacity</span><span lang="tr">Kullanım dışı EV pili, ~%80 kapasite</span></b></li>
+          <li><span class="label">02 · <span lang="en">Check</span><span lang="tr">Kontrol</span></span><b><span lang="en">Test cells and reconfigure</span><span lang="tr">Hücreleri test et, yeniden yapılandır</span></b></li>
+          <li class="split">
+            <div class="pass"><span class="label"><span lang="en">Passes</span><span lang="tr">Geçerse</span></span><b><span lang="en">Solar storage pack with warranty</span><span lang="tr">Garantili güneş depolama paketi</span></b></div>
+            <div><span class="label"><span lang="en">Fails</span><span lang="tr">Geçemezse</span></span><b><span lang="en">Disassembly and raw-material recycling</span><span lang="tr">Söküm ve ham madde geri dönüşümü</span></b></div>
+          </li>
+        </ol>
+      </article>
+
+      <div class="legend" aria-label="Code legend">
+        <span><b>STR</b> <span lang="en">strategy &amp; market entry</span><span lang="tr">strateji ve pazara giriş</span></span>
+        <span><b>INV</b> <span lang="en">investment analysis</span><span lang="tr">yatırım analizi</span></span>
+        <span><b>DAT</b> <span lang="en">data &amp; analytics</span><span lang="tr">veri ve analitik</span></span>
+      </div>
+
+      <ol class="register">
+        <li>
+          <span class="code">INV-02</span>
+          <h3>DoorDash vs. Uber</h3>
+          <p lang="en">Compared annual growth of 105.87% against 36.22% and DoorDash's expansion through Wolt. Recommended DoorDash.</p>
+          <p lang="tr">Yıllık %105,87 ile %36,22 büyümeyi ve DoorDash'in Wolt üzerinden genişlemesini karşılaştırdım. DoorDash'i önerdim.</p>
+          <span class="tools">PitchBook · WSJ · Excel</span>
+        </li>
+        <li>
+          <span class="code">INV-03</span>
+          <h3>Ally Financial vs. PayPal</h3>
+          <p lang="en">Recommended Ally after a 20% dividend increase and a $2B share buyback, while PayPal fell 30% in three months.</p>
+          <p lang="tr">Ally'nin %20 temettü artışı ve 2 milyar $'lık hisse geri alımına karşılık PayPal'ın üç ayda %30 düşüşü nedeniyle Ally'yi önerdim.</p>
+          <span class="tools">WSJ · <span lang="en">stock price analysis</span><span lang="tr">hisse fiyatı analizi</span></span>
+        </li>
+        <li>
+          <span class="code">STR-04</span>
+          <h3>Zomato</h3>
+          <p lang="en">Blue Ocean analysis of how delivery cleared access and cultural barriers to restaurant food in India, plus a competitor and strengths review.</p>
+          <p lang="tr">Teslimatın Hindistan'da restoran yemeğine erişimdeki ulaşım ve kültürel engelleri nasıl kaldırdığının Mavi Okyanus analizi; rakip ve güçlü yön değerlendirmesi.</p>
+          <span class="tools">Blue Ocean · <span lang="en">competitive analysis</span><span lang="tr">rekabet analizi</span></span>
+        </li>
+        <li>
+          <span class="code">STR-05</span>
+          <h3><span lang="en">Stitch Fix: Malaysia &amp; Singapore</span><span lang="tr">Stitch Fix: Malezya ve Singapur</span></h3>
+          <p lang="en">Market-entry plan covering market size, competitors, online clothing demand, revenue model and regression on training data.</p>
+          <p lang="tr">Pazar büyüklüğü, rakipler, online giyim talebi, gelir modeli ve regresyon analizini kapsayan pazara giriş planı.</p>
+          <span class="tools">ERRC · SWOT · BCG · <span lang="en">regression</span><span lang="tr">regresyon</span></span>
+        </li>
+        <li>
+          <span class="code">STR-06</span>
+          <h3>Kindle</h3>
+          <p lang="en">5C marketing analysis: customer profile, the subscription advantage, competitors and collaborators in the e-reader market.</p>
+          <p lang="tr">5C pazarlama analizi: müşteri profili, abonelik avantajı, e-okuyucu pazarındaki rakipler ve iş ortakları.</p>
+          <span class="tools">5C · Statista</span>
+        </li>
+        <li>
+          <span class="code">STR-07</span>
+          <h3>Getir</h3>
+          <p lang="en">Business model canvas for the quick-commerce grocery delivery company.</p>
+          <p lang="tr">Hızlı market teslimatı şirketi için iş modeli kanvası.</p>
+          <span class="tools">Business Model Canvas</span>
+        </li>
+        <li>
+          <span class="code">DAT-08</span>
+          <h3><span lang="en">Whole Foods pricing</span><span lang="tr">Whole Foods fiyat analizi</span></h3>
+          <p lang="en">Measured the price premium per 100 calories for gluten-free, keto and vegan products. Recommended expanding these lines under the private 365 brand.</p>
+          <p lang="tr">Glutensiz, keto ve vegan ürünlerin 100 kalori başına fiyat primini ölçtüm. Bu ürünlerin 365 markası altında genişletilmesini önerdim.</p>
+          <span class="tools">SQL · t-test · Excel</span>
+        </li>
+        <li>
+          <span class="code">DAT-09</span>
+          <h3><span lang="en">Portfolio risk analysis</span><span lang="tr">Portföy risk analizi</span></h3>
+          <p lang="en">Returns, volatility and risk-adjusted return per ticker, plus each holding's weight and risk contribution in a client portfolio.</p>
+          <p lang="tr">Hisse başına getiri, volatilite ve riske göre düzeltilmiş getiri; bir müşteri portföyünde her varlığın ağırlığı ve risk katkısı.</p>
+          <span class="tools">MySQL · CTE · <span lang="en">window functions</span><span lang="tr">pencere fonksiyonları</span></span>
+        </li>
+        <li>
+          <span class="code">DAT-10</span>
+          <h3><span lang="en">SuperStore executive dashboard</span><span lang="tr">SuperStore yönetici paneli</span></h3>
+          <p lang="en">Found the loss-making cities in Texas, Illinois and Colorado and tied the losses to heavy discounting. Recommended targeted campaigns and lower discount rates.</p>
+          <p lang="tr">Texas, Illinois ve Colorado'da zarar eden şehirleri bulup zararı yüksek indirimlere bağladım. Hedefli kampanyalar ve daha düşük indirim oranları önerdim.</p>
+          <span class="tools">Tableau</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="head">
+        <span class="sheet">A-04</span>
+        <h2><span lang="en">Experience</span><span lang="tr">Deneyim</span></h2>
+      </div>
+      <ol class="timeline">
+        <li class="key">
+          <div class="when"><span lang="en">2023 – Present</span><span lang="tr">2023 – Halen</span></div>
+          <div>
+            <h3><span lang="en">CEO, Strategy &amp; Development</span><span lang="tr">CEO, Strateji ve Geliştirme</span></h3>
+            <div class="org"><span lang="en">Arkoçlar Construction, Tourism, Energy &amp; Oil · Çanakkale</span><span lang="tr">Arkoçlar İnşaat, Turizm, Enerji ve Petrol · Çanakkale</span></div>
+            <ul lang="en">
+              <li>Lead company strategy and development across construction, energy and fuel retail.</li>
+              <li>Expanded the on-grid solar plant from 100 kW to 600 kW.</li>
+              <li>Oversee fuel station and convenience store operations, staffing and monthly financial reporting.</li>
+            </ul>
+            <ul lang="tr">
+              <li>İnşaat, enerji ve akaryakıt perakendeciliği alanlarında şirket stratejisini ve geliştirme faaliyetlerini yönetiyorum.</li>
+              <li>Şebekeye bağlı güneş enerjisi santralini 100 kW'tan 600 kW'a genişlettim.</li>
+              <li>Akaryakıt istasyonu ve market operasyonlarını, personeli ve aylık finansal raporlamayı denetliyorum.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="study">
+          <div class="when">09/2021 – 04/2023</div>
+          <div>
+            <h3><span lang="en">Graduate study</span><span lang="tr">Yüksek lisans</span></h3>
+            <div class="org">Hult International Business School · Boston &amp; San Francisco</div>
+            <p class="note" lang="en">Full-time M.S. International Business and M.S. Business Analytics. See <a href="#education">Education</a>.</p>
+            <p class="note" lang="tr">Tam zamanlı Uluslararası İşletme ve İş Analitiği yüksek lisansları. Bkz. <a href="#education">Eğitim</a>.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">05/2019 – 08/2021</div>
+          <div>
+            <h3><span lang="en">Business Development Manager</span><span lang="tr">İş Geliştirme Müdürü</span></h3>
+            <div class="org"><span lang="en">Arkoçlar Construction, Tourism, Energy &amp; Oil · Çanakkale</span><span lang="tr">Arkoçlar İnşaat, Turizm, Enerji ve Petrol · Çanakkale</span></div>
+            <ul lang="en">
+              <li>Engineered, designed and led the build of a 100 kW on-grid solar energy system.</li>
+              <li>Responsible manager of the LPG autogas station and filling facility: regular safety checks and reporting to the Chamber of Mechanical Engineers.</li>
+              <li>Set long-term growth strategy; researched and qualified leads; negotiated contracts.</li>
+              <li>Tracked weekly, monthly and quarterly sales metrics and kept the CRM up to date.</li>
+            </ul>
+            <ul lang="tr">
+              <li>100 kW'lık şebekeye bağlı güneş enerjisi sistemini tasarladım ve kurulumunu yönettim.</li>
+              <li>LPG otogaz istasyonu ve dolum tesisinin sorumlu müdürlüğünü yaptım: düzenli güvenlik kontrolleri ve Makine Mühendisleri Odası süreçleri.</li>
+              <li>Uzun vadeli büyüme stratejisini belirledim; potansiyel müşteri araştırması ve sözleşme müzakereleri yürüttüm.</li>
+              <li>Haftalık, aylık ve çeyreklik satış metriklerini takip ettim, CRM'i güncel tuttum.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="head">
+        <span class="sheet">A-05</span>
+        <h2><span lang="en">Education</span><span lang="tr">Eğitim</span></h2>
+      </div>
+      <div class="cols">
+        <div class="edu">
+          <span class="label">09/2022 – 04/2023 · San Francisco</span>
+          <h3><span lang="en">M.S. Business Analytics (STEM)</span><span lang="tr">İş Analitiği Yüksek Lisansı (STEM)</span></h3>
+          <div class="org">Hult International Business School</div>
+          <p lang="en">SQL, Python, R, machine learning, Tableau, business analysis with structured data.</p>
+          <p lang="tr">SQL, Python, R, makine öğrenmesi, Tableau, yapılandırılmış veriyle iş analizi.</p>
+        </div>
+        <div class="edu">
+          <span class="label">09/2021 – 08/2022 · Boston</span>
+          <h3><span lang="en">M.S. International Business</span><span lang="tr">Uluslararası İşletme Yüksek Lisansı</span></h3>
+          <div class="org">Hult International Business School</div>
+          <p lang="en">Strategy, finance, accounting, behavioral economics and decision making, marketing, project planning.</p>
+          <p lang="tr">Strateji, finans, muhasebe, davranışsal ekonomi ve karar alma, pazarlama, proje planlama.</p>
+        </div>
+        <div class="edu">
+          <span class="label"><span lang="en">2020 · Istanbul</span><span lang="tr">2020 · İstanbul</span></span>
+          <h3><span lang="en">B.A.Sc. Civil Engineering</span><span lang="tr">İnşaat Mühendisliği Lisansı</span></h3>
+          <div class="org"><span lang="en">Yeditepe University</span><span lang="tr">Yeditepe Üniversitesi</span></div>
+          <p lang="en">Contributed to research on the fall-cone behavior of non-plastic silts, later published in <i>Géotechnique Letters</i>.</p>
+          <p lang="tr">Plastik olmayan siltlerde koni düşme davranışı üzerine araştırmada yer aldım; çalışma <i>Géotechnique Letters</i>'ta yayımlandı.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="head">
+        <span class="sheet">A-06</span>
+        <h2><span lang="en">Skills &amp; certifications</span><span lang="tr">Yetkinlikler ve sertifikalar</span></h2>
+      </div>
+      <div class="skills">
+        <div>
+          <span class="label"><span lang="en">Strategy &amp; business</span><span lang="tr">Strateji ve iş</span></span>
+          <div class="chips">
+            <span lang="en">Business development</span><span lang="tr">İş geliştirme</span>
+            <span lang="en">Market research</span><span lang="tr">Pazar araştırması</span>
+            <span lang="en">Market entry</span><span lang="tr">Pazara giriş</span>
+            <span>Blue Ocean / ERRC</span><span>SWOT</span><span>BCG</span>
+            <span>Business Model Canvas</span><span>5C / 4P</span>
+            <span lang="en">Contract negotiation</span><span lang="tr">Sözleşme müzakeresi</span>
+            <span>PitchBook</span>
+          </div>
+        </div>
+        <div>
+          <span class="label"><span lang="en">Data &amp; analytics</span><span lang="tr">Veri ve analitik</span></span>
+          <div class="chips">
+            <span>SQL (MySQL)</span><span>Python</span><span>R</span><span>Excel</span><span>Tableau</span>
+            <span>Google Analytics</span><span>Adobe Analytics</span>
+            <span lang="en">Regression &amp; hypothesis tests</span><span lang="tr">Regresyon ve hipotez testleri</span>
+          </div>
+        </div>
+        <div>
+          <span class="label"><span lang="en">Engineering &amp; projects</span><span lang="tr">Mühendislik ve proje</span></span>
+          <div class="chips">
+            <span>AutoCAD</span><span>IdeCAD</span><span>SAP2000</span><span>Fortran</span><span>Agile</span><span>Waterfall</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="certs">
+        <ul>
+          <li><span>Google Data Analytics · Google Project Management · Google Digital Marketing &amp; E-commerce</span><span class="mono">Google</span></li>
+          <li><span>Intermediate SQL Queries · SQL for Joining Data</span><span class="mono">10/2022</span></li>
+          <li><span>Introduction to Python</span><span class="mono">02/2022</span></li>
+          <li><span lang="en">Site Chief Registration, Chamber of Civil Engineers, Çanakkale</span><span lang="tr">Şantiye Şefliği Belgesi, İnşaat Mühendisleri Odası Çanakkale</span><span class="mono">2022</span></li>
+          <li><span lang="en">LPG Autogas Station &amp; Filling Facility Responsible Manager</span><span lang="tr">LPG Otogaz İstasyonu ve Dolum Tesisi Sorumlu Müdürlük Belgesi</span><span class="mono">LPG</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap grid">
+      <div>
+        <span class="label">A-07 · <span lang="en">Contact</span><span lang="tr">İletişim</span></span>
+        <h2 style="margin-top:.8rem"><span lang="en">Let's talk about growth, markets and energy.</span><span lang="tr">Büyüme, pazarlar ve enerji üzerine konuşalım.</span></h2>
+        <div class="mail">
+          <code id="email">alinadir017@gmail.com</code>
+          <button type="button" id="copy-email"><span lang="en">Copy email</span><span lang="tr">E-postayı kopyala</span></button>
+          <a class="li" href="https://www.linkedin.com/in/ali-nadir-koç-141480117/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+      <p class="off" lang="en"><b>Say hello.</b> Whether it's energy, growth or a project you're thinking about, I'd be glad to hear from you.</p>
+      <p class="off" lang="tr"><b>Bir merhaba yeter.</b> Enerji, büyüme ya da aklındaki bir proje; ne olursa olsun haberleşmekten memnuniyet duyarım.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Ali Nadir Koç</span>
+    <span lang="en">Made in Çanakkale</span><span lang="tr">Çanakkale'den sevgilerle</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var btns = document.querySelectorAll('.lang button');
+  function setLang(l, save){
+    root.setAttribute('data-lang', l);
+    root.setAttribute('lang', l);
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.set === l)); });
+    if (save) { try { localStorage.setItem('ank-lang', l); } catch(e) {} }
+  }
+  var initial = 'en';
+  var hash = (location.hash || '').replace('#','').toLowerCase();
+  if (hash === 'tr' || hash === 'en') { initial = hash; }
+  else {
+    var stored = null;
+    try { stored = localStorage.getItem('ank-lang'); } catch(e) {}
+    if (stored === 'tr' || stored === 'en') initial = stored;
+    else if ((navigator.language || '').toLowerCase().indexOf('tr') === 0) initial = 'tr';
+  }
+  setLang(initial, false);
+  btns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.dataset.set, true); }); });
+
+  var copyBtn = document.getElementById('copy-email');
+  var email = document.getElementById('email');
+  copyBtn.addEventListener('click', function(){
+    var text = email.textContent.trim();
+    var done = function(){
+      var en = copyBtn.querySelector('[lang="en"]'), t = copyBtn.querySelector('[lang="tr"]');
+      en.textContent = 'Copied'; t.textContent = 'Kopyalandı';
+      setTimeout(function(){ en.textContent = 'Copy email'; t.textContent = 'E-postayı kopyala'; }, 1800);
+    };
+    var select = function(){
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, select);
+    } else { select(); }
+  });
+})();
+</script>
+</body>
+</html>
