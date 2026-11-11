@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alinadirkoc.com/">
 <meta property="og:title" content="Ali Nadir Koç">
-<meta property="og:description" content="Civil engineer turned strategist. CEO, Strategy &amp; Development at Arkoçlar. Bağlama player.">
+<meta property="og:description" content="Civil engineer turned strategist. CEO, Strategy &amp; Development at Arkoçlar.">
 <meta property="og:image" content="https://alinadirkoc.com/portrait.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <style>
@@ -52,9 +52,6 @@ img{max-width:100%}
   color-scheme:dark;
 }
 
-/* language switch */
-html:not([data-lang="tr"]) [lang="tr"]{display:none!important}
-html[data-lang="tr"] [lang="en"]{display:none!important}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -76,10 +73,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .nav{display:flex;gap:1.1rem;margin-left:auto;flex-wrap:wrap}
 .nav a{font-family:var(--f-mono);font-size:.78rem;text-decoration:none;color:var(--ink-2)}
 .nav a:hover{color:var(--ink)}
-.lang{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px}
-.lang button{font:500 .72rem var(--f-mono);letter-spacing:.08em;border:0;background:transparent;color:var(--ink-2);padding:.3rem .6rem;border-radius:999px;cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-@media (max-width:720px){.nav{display:none}.lang{margin-left:auto}}
+@media (max-width:720px){.nav{display:none}}
 
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:0;background:#0b1826}
@@ -103,18 +97,12 @@ main .hero .btn.primary:hover{background:#ffd27a}
 .bar .mark span{color:#f4c464}
 .bar .nav a{color:rgba(255,255,255,.78)}
 .bar .nav a:hover{color:#fff}
-.bar .lang{border-color:rgba(255,255,255,.3)}
-.bar .lang button{color:rgba(255,255,255,.75)}
-.bar .lang button[aria-pressed="true"]{background:#f4c464;color:#14283b}
-html.scrolled .bar{background:color-mix(in srgb,var(--paper) 92%,transparent);border-bottom-color:var(--rule)}
+.bar .bar .bar html.scrolled .bar{background:color-mix(in srgb,var(--paper) 92%,transparent);border-bottom-color:var(--rule)}
 html.scrolled .bar .mark{color:var(--ink)}
 html.scrolled .bar .mark span{color:var(--accent-ink)}
 html.scrolled .bar .nav a{color:var(--ink-2)}
 html.scrolled .bar .nav a:hover{color:var(--ink)}
-html.scrolled .bar .lang{border-color:var(--rule)}
-html.scrolled .bar .lang button{color:var(--ink-2)}
-html.scrolled .bar .lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-body::before{background:#0b1826}
+html.scrolled .bar html.scrolled .bar html.scrolled .bar body::before{background:#0b1826}
 html.scrolled body::before{background:var(--paper)}
 main .hero{margin-top:calc(-1 * var(--barh))}
 main .hero .wrap{padding-top:calc(var(--barh) + clamp(2.5rem,7vw,5.5rem))}
@@ -181,6 +169,9 @@ section{padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--rule)}
 .notes ol li b{font-family:var(--f-display);font-weight:650;font-stretch:104%}
 .notes ol li.art{background:linear-gradient(90deg,var(--accent-soft),transparent 75%)}
 .notes ol li.art b{color:var(--accent-ink)}
+.notes ol li .notevideo{grid-column:2;margin:.85rem 0 .1rem;border:1px solid var(--rule);background:var(--card)}
+.notes ol li .notevideo video{display:block;width:100%;height:auto;aspect-ratio:3/2;background:#0b1826}
+.notes ol li .notevideo figcaption{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding:.45rem .6rem;border-top:1px solid var(--rule)}
 .sign{margin-top:1.4rem;font-family:var(--f-display);font-weight:600;font-style:italic;font-size:1.3rem;color:var(--accent-ink)}
 @media (max-width:820px){.notes{grid-template-columns:minmax(0,1fr)}}
 
@@ -273,17 +264,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
   <div class="wrap">
     <a class="mark" href="#top">A<span>N</span>K</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#about"><span lang="en">About</span><span lang="tr">Hakkımda</span></a>
-      <a href="#work"><span lang="en">Work</span><span lang="tr">Projeler</span></a>
-      <a href="#experience"><span lang="en">Experience</span><span lang="tr">Deneyim</span></a>
-      <a href="#education"><span lang="en">Education</span><span lang="tr">Eğitim</span></a>
-      <a href="#skills"><span lang="en">Skills</span><span lang="tr">Yetkinlikler</span></a>
-      <a href="#contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a>
+      <a href="#about"><span lang="en">About</span></a>
+      <a href="#work"><span lang="en">Work</span></a>
+      <a href="#experience"><span lang="en">Experience</span></a>
+      <a href="#education"><span lang="en">Education</span></a>
+      <a href="#skills"><span lang="en">Skills</span></a>
+      <a href="#contact"><span lang="en">Contact</span></a>
     </nav>
-    <div class="lang" role="group" aria-label="Language / Dil">
-      <button type="button" id="btn-en" data-set="en" aria-pressed="true">EN</button>
-      <button type="button" id="btn-tr" data-set="tr" aria-pressed="false">TR</button>
-    </div>
   </div>
 </header>
 
@@ -291,25 +278,23 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
   <div class="hero">
     <div class="wrap">
       <div>
-        <div class="label"><span lang="en">Portfolio · Business development &amp; strategy</span><span lang="tr">Portfolyo · İş geliştirme ve strateji</span></div>
-        <div class="hello"><span lang="en">Hi, I'm</span><span lang="tr">Merhaba, ben</span></div>
+        <div class="label"><span lang="en">Portfolio · Business development &amp; strategy</span></div>
         <h1>Ali Nadir Koç</h1>
-        <div class="role"><span lang="en">Civil engineer turned strategist · bağlama player</span><span lang="tr">Stratejiye geçmiş bir inşaat mühendisi · bağlama sanatçısı</span></div>
-        <p class="lead" lang="en">I'm an engineer at heart who found his way into strategy. At Arkoçlar I built our solar plant and renewed our BP station's infrastructure down to the tanks and pipelines. In between, I went to Boston and San Francisco for two master's degrees, and came back to Çanakkale as CEO for strategy and development. I still like to see the numbers before I make a call.</p>
-        <p class="lead" lang="tr">Yolu stratejiye çıkmış, özünde bir mühendisim. Arkoçlar'da güneş santralimizi kurdum, BP istasyonumuzun altyapısını tanklarına ve boru hatlarına kadar yeniledim. Arada Boston ve San Francisco'da iki yüksek lisans yaptım ve Çanakkale'ye, strateji ve geliştirmeden sorumlu CEO olarak döndüm. Bir karar vermeden önce rakamları görmeyi hâlâ severim.</p>
+        <div class="role"><span lang="en">Civil engineer turned strategist</span></div>
+        <p class="lead" lang="en">At Arkoçlar: built and expanded the company's solar plant and renewed its fuel station's infrastructure down to the tanks and pipelines. Two master's degrees in Boston and San Francisco, then back to Çanakkale as CEO for strategy and development. Numbers first, then the decision.</p>
         <div class="cta">
-          <a class="btn primary" href="#work"><span lang="en">See selected work</span><span lang="tr">Projelere göz at</span></a>
-          <a class="btn" href="#about"><span lang="en">A bit about me</span><span lang="tr">Biraz ben</span></a>
+          <a class="btn primary" href="#work"><span lang="en">See selected work</span></a>
+          <a class="btn" href="#about"><span lang="en">About</span></a>
         </div>
       </div>
 
       <div class="photocard">
         <figure><img src="portrait.jpg" alt="Ali Nadir Koç" width="1000" height="800"><figcaption>A-01 · Ali Nadir Koç</figcaption></figure>
-        <div class="roleline"><span class="k"><span lang="en">Current role</span><span lang="tr">Görev</span></span><span lang="en">CEO, Strategy &amp; Development · Arkoçlar</span><span lang="tr">CEO, Strateji ve Geliştirme · Arkoçlar</span></div>
+        <div class="roleline"><span class="k"><span lang="en">Current role</span></span><span lang="en">CEO, Strategy &amp; Development · Arkoçlar</span></div>
         <div class="foot">
-          <div><b>2019</b><small><span lang="en">In the field since</span><span lang="tr">Sahada, şu yıldan beri</span></small></div>
-          <div><b>2</b><small><span lang="en">Master's degrees</span><span lang="tr">Yüksek lisans</span></small></div>
-          <div><b>12</b><small><span lang="en">Projects below</span><span lang="tr">Proje</span></small></div>
+          <div><b>2019</b><small><span lang="en">In the field since</span></small></div>
+          <div><b>2</b><small><span lang="en">Master's degrees</span></small></div>
+          <div><b>12</b><small><span lang="en">Projects below</span></small></div>
         </div>
       </div>
     </div>
@@ -320,18 +305,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
       <div>
         <div class="head" style="margin-bottom:0">
           <span class="sheet">A-02</span>
-          <h2><span lang="en">A few notes about me</span><span lang="tr">Benim hakkımda birkaç not</span></h2>
+          <h2><span lang="en">General notes</span></h2>
         </div>
-        <p class="intro" lang="en">Every drawing sheet has a box of general notes, the things you should know before you read the rest. Here are mine.</p>
-        <p class="intro" lang="tr">Her paftada bir genel notlar kutusu vardır: geri kalanını okumadan önce bilmen gerekenler. Bunlar da benimkiler.</p>
+        <p class="intro" lang="en">Every drawing sheet has a box of general notes, the things to know before reading the rest.</p>
       </div>
       <div>
         <ol>
-          <li><p lang="en"><b>I'm an engineer first.</b> I like projects you can stand next to, like a fuel station we renewed down to its tanks and pipelines.</p><p lang="tr"><b>Önce mühendisim.</b> Yanında durabileceğin projeleri severim; tanklarına ve boru hatlarına kadar yenilediğimiz bir istasyon gibi.</p></li>
-          <li><p lang="en"><b>I went back to school on purpose.</b> After two years in the field, two master's degrees at Hult taught me to back a decision with data, not just instinct.</p><p lang="tr"><b>Okula bilerek geri döndüm.</b> Sahada geçen iki yılın ardından Hult'taki iki yüksek lisans, bir kararı sadece sezgiyle değil veriyle de desteklemeyi öğretti.</p></li>
-          <li><p lang="en"><b>I like to see the numbers.</b> Before a big call I open SQL, Python, R or Tableau and look for what the data says.</p><p lang="tr"><b>Rakamları görmeyi severim.</b> Büyük bir karardan önce SQL, Python, R ya da Tableau'yu açıp verinin ne söylediğine bakarım.</p></li>
-          <li class="art"><p lang="en"><b>I'm also a musician.</b> I play the bağlama, the long-necked lute at the heart of Turkish folk music, professionally. The engineer, the strategist and the artist are the same person.</p><p lang="tr"><b>Bir yanım da sanatçı.</b> Profesyonel olarak bağlama çalıyorum. Mühendis, stratejist ve sanatçı aynı kişi.</p></li>
-          <li><p lang="en"><b>Before strategy, there was the wind.</b> I kiteboarded and windsurfed at PWA World Tour events in Alaçatı, Datça and Istanbul, played tennis through university and chess for my school team.</p><p lang="tr"><b>Stratejiden önce rüzgâr vardı.</b> PWA Dünya Turu'nun Alaçatı, Datça ve İstanbul etaplarında kiteboard ve windsurf yaptım, üniversite boyunca tenis, okul takımında satranç oynadım.</p></li>
+          <li><p lang="en"><b>Engineer first.</b> Projects you can stand next to, like a fuel station renewed down to its tanks and pipelines.</p></li>
+          <li><p lang="en"><b>Back to school, on purpose.</b> After two years in the field, two master's degrees at Hult: decisions backed by data, not just instinct.</p></li>
+          <li><p lang="en"><b>Numbers first.</b> Before a big call: SQL, Python, R or Tableau, and a close look at what the data says.</p></li>
+          <li class="art"><p lang="en"><b>Bağlama.</b> Professional player of the short-neck bağlama, a cornerstone of Turkish folk music.</p>
+            <figure class="notevideo"><video controls preload="metadata" playsinline poster="baglama-poster.jpg" width="1080" height="720"><source src="baglama.mp4" type="video/mp4"></video><figcaption><span lang="en">Detail 4 · Bağlama session · Nov 2026</span></figcaption></figure></li>
+          <li><p lang="en"><b>Before strategy, the wind.</b> Kiteboarding and windsurfing at PWA World Tour events in Alaçatı, Datça and Istanbul; tennis through university; chess for the school team.</p></li>
         </ol>
         <div class="sign">— Ali</div>
       </div>
@@ -342,125 +327,110 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
     <div class="wrap">
       <div class="head">
         <span class="sheet">A-03</span>
-        <h2><span lang="en">Selected work</span><span lang="tr">Seçilmiş projeler</span></h2>
-        <p lang="en">From our own fuel station to Hult's classrooms: field, strategy, investment and data projects.</p>
-        <p lang="tr">Kendi istasyonumuzdan Hult'un sınıflarına: saha, strateji, yatırım ve veri projeleri.</p>
+        <h2><span lang="en">Selected work</span></h2>
+        <p lang="en">From Arkoçlar's fuel station to Hult's classrooms: field, strategy, investment and data projects.</p>
       </div>
 
       <article class="feature">
         <div>
-          <span class="label">STR-01 · <span lang="en">Featured</span><span lang="tr">Öne çıkan</span></span>
+          <span class="label">STR-01 · <span lang="en">Featured</span></span>
           <h3>Batt2Life</h3>
-          <div class="meta"><span lang="en">Second-life EV batteries for solar storage · Hult MIB · team of 6 · 2022</span><span lang="tr">Elektrikli araç pillerine ikinci hayat · Hult MIB · 6 kişilik takım · 2022</span></div>
+          <div class="meta"><span lang="en">Second-life EV batteries for solar storage · Hult MIB · team of 6 · 2022</span></div>
           <p lang="en">EV batteries are replaced once they drop to about 80% capacity, which will leave a growing supply of discarded packs. Batt2Life tests and reconfigures them into affordable storage for homes and communities running on solar, and sends the packs that fail to raw-material recycling.</p>
-          <p lang="tr">Elektrikli araç pilleri kapasiteleri yaklaşık %80'e düştüğünde değiştiriliyor ve bu da giderek büyüyen bir kullanılmış pil arzı yaratıyor. Batt2Life bu pilleri test edip yeniden yapılandırarak güneş enerjisiyle çalışan ev ve topluluklar için uygun fiyatlı depolamaya dönüştürüyor; testi geçemeyenleri ham madde geri dönüşümüne gönderiyor.</p>
-          <p lang="en">We built the trend matrix and research plan, analyzed South Africa's market and regulations, wrote the 4P/5C marketing plan, and outlined B2B entry with automotive suppliers in Bursa and İzmir.</p>
-          <p lang="tr">Trend matrisini ve araştırma planını hazırladık, Güney Afrika pazarını ve mevzuatını inceledik, 4P/5C pazarlama planını yazdık ve Bursa ile İzmir'deki otomotiv tedarikçilerine yönelik B2B giriş planını çıkardık.</p>
+          <p lang="en">Trend matrix and research plan, an analysis of South Africa's market and regulations, a 4P/5C marketing plan, and a B2B entry outline with automotive suppliers in Bursa and İzmir.</p>
           <table class="specs">
-            <thead><tr><th><span lang="en">Pack</span><span lang="tr">Paket</span></th><th><span lang="en">Target price</span><span lang="tr">Hedef fiyat</span></th><th><span lang="en">Customer</span><span lang="tr">Müşteri</span></th></tr></thead>
+            <thead><tr><th><span lang="en">Pack</span></th><th><span lang="en">Target price</span></th><th><span lang="en">Customer</span></th></tr></thead>
             <tbody>
-              <tr><td>3 kWh</td><td>$400</td><td rowspan="3"><span lang="en">Households, communities, B2B</span><span lang="tr">Haneler, topluluklar, B2B</span></td></tr>
+              <tr><td>3 kWh</td><td>$400</td><td rowspan="3"><span lang="en">Households, communities, B2B</span></td></tr>
               <tr><td>5 kWh</td><td>$600</td></tr>
               <tr><td>10 kWh</td><td>$1,000</td></tr>
             </tbody>
           </table>
-          <p class="specnote" lang="en">Target prices are from our 2022 business plan. Battery costs have fallen since, so the same packs would likely be priced lower today.</p>
-          <p class="specnote" lang="tr">Hedef fiyatlar 2022 iş planımıza aittir. Pil maliyetleri o zamandan bu yana düştü; aynı paketler bugün büyük ihtimalle daha düşük fiyatlanırdı.</p>
+          <p class="specnote" lang="en">Target prices are from the team's 2022 business plan. Battery costs have fallen since, so the same packs would likely be priced lower today.</p>
         </div>
         <ol class="flow" aria-label="Batt2Life process">
-          <li><span class="label">01 · <span lang="en">Supply</span><span lang="tr">Tedarik</span></span><b><span lang="en">Retired EV battery, ~80% capacity</span><span lang="tr">Kullanım dışı EV pili, ~%80 kapasite</span></b></li>
-          <li><span class="label">02 · <span lang="en">Check</span><span lang="tr">Kontrol</span></span><b><span lang="en">Test cells and reconfigure</span><span lang="tr">Hücreleri test et, yeniden yapılandır</span></b></li>
+          <li><span class="label">01 · <span lang="en">Supply</span></span><b><span lang="en">Retired EV battery, ~80% capacity</span></b></li>
+          <li><span class="label">02 · <span lang="en">Check</span></span><b><span lang="en">Test cells and reconfigure</span></b></li>
           <li class="split">
-            <div class="pass"><span class="label"><span lang="en">Passes</span><span lang="tr">Geçerse</span></span><b><span lang="en">Solar storage pack with warranty</span><span lang="tr">Garantili güneş depolama paketi</span></b></div>
-            <div><span class="label"><span lang="en">Fails</span><span lang="tr">Geçemezse</span></span><b><span lang="en">Disassembly and raw-material recycling</span><span lang="tr">Söküm ve ham madde geri dönüşümü</span></b></div>
+            <div class="pass"><span class="label"><span lang="en">Passes</span></span><b><span lang="en">Solar storage pack with warranty</span></b></div>
+            <div><span class="label"><span lang="en">Fails</span></span><b><span lang="en">Disassembly and raw-material recycling</span></b></div>
           </li>
         </ol>
       </article>
 
       <div class="legend" aria-label="Code legend">
-        <span><b>FLD</b> <span lang="en">field project</span><span lang="tr">saha projesi</span></span>
-        <span><b>STR</b> <span lang="en">strategy &amp; market entry</span><span lang="tr">strateji ve pazara giriş</span></span>
-        <span><b>INV</b> <span lang="en">investment analysis</span><span lang="tr">yatırım analizi</span></span>
-        <span><b>DAT</b> <span lang="en">data &amp; analytics</span><span lang="tr">veri ve analitik</span></span>
+        <span><b>FLD</b> <span lang="en">field project</span></span>
+        <span><b>STR</b> <span lang="en">strategy &amp; market entry</span></span>
+        <span><b>INV</b> <span lang="en">investment analysis</span></span>
+        <span><b>DAT</b> <span lang="en">data &amp; analytics</span></span>
       </div>
 
       <ol class="register">
         <li>
           <span class="code">FLD-02</span>
-          <h3><span lang="en">BP station infrastructure renewal</span><span lang="tr">BP istasyonu altyapı yenilemesi</span></h3>
+          <h3><span lang="en">BP station infrastructure renewal</span></h3>
           <p lang="en">2023. Complete renewal of the BP station's infrastructure: fuel tanks, pipelines, pumps and forecourt concrete, plus an EV charging station and its infrastructure, from planning to handover.</p>
-          <p lang="tr">2023. BP istasyonunun tüm altyapısının yenilenmesi: yakıt tankları, boru hatları, pompalar, saha betonu ve elektrikli araç şarj istasyonu ile altyapısı; planlamadan teslime kadar.</p>
-          <span class="tools"><span lang="en">Site management · Mechanical systems · EV charging</span><span lang="tr">Saha yönetimi · Mekanik tesisat · Elektrikli araç şarjı</span></span>
+          <span class="tools"><span lang="en">Site management · Mechanical systems · EV charging</span></span>
         </li>
         <li>
           <span class="code">FLD-03</span>
-          <h3><span lang="en">Lavender garden, from field to shelf</span><span lang="tr">Lavanta bahçesi, tarladan rafa</span></h3>
+          <h3><span lang="en">Lavender garden, from field to shelf</span></h3>
           <p lang="en">A 5-decare (about 5,000 m²) lavender garden on the station grounds. Lavender oil and other products go straight onto the station market's shelves.</p>
-          <p lang="tr">İstasyon arazisinde 5 dönümlük lavanta bahçesi. Lavanta yağı ve diğer ürünler doğrudan istasyon marketinin raflarında satılıyor.</p>
-          <span class="tools"><span lang="en">Agriculture · Product development · Retail</span><span lang="tr">Tarım · Ürün geliştirme · Perakende</span></span>
-          <figure class="regphoto"><img src="lavender.jpg" alt="Lavender garden at the station / İstasyondaki lavanta bahçesi" width="1600" height="685" loading="lazy"></figure>
+          <span class="tools"><span lang="en">Agriculture · Product development · Retail</span></span>
+          <figure class="regphoto"><img src="lavender.jpg" alt="Lavender garden at the station" width="1600" height="685" loading="lazy"></figure>
         </li>
         <li>
           <span class="code">INV-04</span>
           <h3>DoorDash vs. Uber</h3>
           <p lang="en">Compared annual growth of 105.87% against 36.22% and DoorDash's expansion through Wolt. Recommended DoorDash.</p>
-          <p lang="tr">Yıllık %105,87 ile %36,22 büyümeyi ve DoorDash'in Wolt üzerinden genişlemesini karşılaştırdım. DoorDash'i önerdim.</p>
           <span class="tools">PitchBook · WSJ · Excel</span>
         </li>
         <li>
           <span class="code">INV-05</span>
           <h3>Ally Financial vs. PayPal</h3>
           <p lang="en">Recommended Ally after a 20% dividend increase and a $2B share buyback, while PayPal fell 30% in three months.</p>
-          <p lang="tr">Ally'nin %20 temettü artışı ve 2 milyar $'lık hisse geri alımına karşılık PayPal'ın üç ayda %30 düşüşü nedeniyle Ally'yi önerdim.</p>
-          <span class="tools">WSJ · <span lang="en">stock price analysis</span><span lang="tr">hisse fiyatı analizi</span></span>
+          <span class="tools">WSJ · <span lang="en">stock price analysis</span></span>
         </li>
         <li>
           <span class="code">STR-06</span>
           <h3>Zomato</h3>
           <p lang="en">Blue Ocean analysis of how delivery cleared access and cultural barriers to restaurant food in India, plus a competitor and strengths review.</p>
-          <p lang="tr">Teslimatın Hindistan'da restoran yemeğine erişimdeki ulaşım ve kültürel engelleri nasıl kaldırdığının Mavi Okyanus analizi; rakip ve güçlü yön değerlendirmesi.</p>
-          <span class="tools">Blue Ocean · <span lang="en">competitive analysis</span><span lang="tr">rekabet analizi</span></span>
+          <span class="tools">Blue Ocean · <span lang="en">competitive analysis</span></span>
         </li>
         <li>
           <span class="code">STR-07</span>
-          <h3><span lang="en">Stitch Fix: Malaysia &amp; Singapore</span><span lang="tr">Stitch Fix: Malezya ve Singapur</span></h3>
+          <h3><span lang="en">Stitch Fix: Malaysia &amp; Singapore</span></h3>
           <p lang="en">Market-entry plan covering market size, competitors, online clothing demand, revenue model and regression on training data.</p>
-          <p lang="tr">Pazar büyüklüğü, rakipler, online giyim talebi, gelir modeli ve regresyon analizini kapsayan pazara giriş planı.</p>
-          <span class="tools">ERRC · SWOT · BCG · <span lang="en">regression</span><span lang="tr">regresyon</span></span>
+          <span class="tools">ERRC · SWOT · BCG · <span lang="en">regression</span></span>
         </li>
         <li>
           <span class="code">STR-08</span>
           <h3>Kindle</h3>
           <p lang="en">5C marketing analysis: customer profile, the subscription advantage, competitors and collaborators in the e-reader market.</p>
-          <p lang="tr">5C pazarlama analizi: müşteri profili, abonelik avantajı, e-okuyucu pazarındaki rakipler ve iş ortakları.</p>
           <span class="tools">5C · Statista</span>
         </li>
         <li>
           <span class="code">STR-09</span>
           <h3>Getir</h3>
           <p lang="en">Business model canvas for the quick-commerce grocery delivery company.</p>
-          <p lang="tr">Hızlı market teslimatı şirketi için iş modeli kanvası.</p>
           <span class="tools">Business Model Canvas</span>
         </li>
         <li>
           <span class="code">DAT-10</span>
-          <h3><span lang="en">Whole Foods pricing</span><span lang="tr">Whole Foods fiyat analizi</span></h3>
+          <h3><span lang="en">Whole Foods pricing</span></h3>
           <p lang="en">Measured the price premium per 100 calories for gluten-free, keto and vegan products. Recommended expanding these lines under the private 365 brand.</p>
-          <p lang="tr">Glutensiz, keto ve vegan ürünlerin 100 kalori başına fiyat primini ölçtüm. Bu ürünlerin 365 markası altında genişletilmesini önerdim.</p>
           <span class="tools">SQL · t-test · Excel</span>
         </li>
         <li>
           <span class="code">DAT-11</span>
-          <h3><span lang="en">Portfolio risk analysis</span><span lang="tr">Portföy risk analizi</span></h3>
+          <h3><span lang="en">Portfolio risk analysis</span></h3>
           <p lang="en">Returns, volatility and risk-adjusted return per ticker, plus each holding's weight and risk contribution in a client portfolio.</p>
-          <p lang="tr">Hisse başına getiri, volatilite ve riske göre düzeltilmiş getiri; bir müşteri portföyünde her varlığın ağırlığı ve risk katkısı.</p>
-          <span class="tools">MySQL · CTE · <span lang="en">window functions</span><span lang="tr">pencere fonksiyonları</span></span>
+          <span class="tools">MySQL · CTE · <span lang="en">window functions</span></span>
         </li>
         <li>
           <span class="code">DAT-12</span>
-          <h3><span lang="en">SuperStore executive dashboard</span><span lang="tr">SuperStore yönetici paneli</span></h3>
+          <h3><span lang="en">SuperStore executive dashboard</span></h3>
           <p lang="en">Found the loss-making cities in Texas, Illinois and Colorado and tied the losses to heavy discounting. Recommended targeted campaigns and lower discount rates.</p>
-          <p lang="tr">Texas, Illinois ve Colorado'da zarar eden şehirleri bulup zararı yüksek indirimlere bağladım. Hedefli kampanyalar ve daha düşük indirim oranları önerdim.</p>
           <span class="tools">Tableau</span>
         </li>
       </ol>
@@ -471,70 +441,52 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
     <div class="wrap">
       <div class="head">
         <span class="sheet">A-04</span>
-        <h2><span lang="en">Experience</span><span lang="tr">Deneyim</span></h2>
+        <h2><span lang="en">Experience</span></h2>
       </div>
       <ol class="timeline">
         <li class="key">
-          <div class="when"><span lang="en">2023 – Present</span><span lang="tr">2023 – Halen</span></div>
+          <div class="when"><span lang="en">2023 – Present</span></div>
           <div>
-            <h3><span lang="en">CEO, Strategy &amp; Development</span><span lang="tr">CEO, Strateji ve Geliştirme</span></h3>
-            <div class="org"><span lang="en">Arkoçlar Construction, Tourism, Energy &amp; Oil · Çanakkale</span><span lang="tr">Arkoçlar İnşaat, Turizm, Enerji ve Petrol · Çanakkale</span></div>
+            <h3><span lang="en">CEO, Strategy &amp; Development</span></h3>
+            <div class="org"><span lang="en">Arkoçlar Construction, Tourism, Energy &amp; Oil · Çanakkale</span></div>
             <ul lang="en">
               <li>Lead company strategy and development across construction, energy and fuel retail.</li>
               <li>Expanded the on-grid solar plant from 100 kW to 200 kW.</li>
               <li>Oversee fuel station and convenience store operations, staffing and monthly financial reporting.</li>
               <li>Established a 5-decare (about 5,000 m²) lavender garden on the station grounds; lavender oil and other products are sold in the station market.</li>
             </ul>
-            <ul lang="tr">
-              <li>İnşaat, enerji ve akaryakıt perakendeciliği alanlarında şirket stratejisi ve geliştirme faaliyetlerinin yönetimi.</li>
-              <li>Şebekeye bağlı güneş enerjisi santralinin 100 kW'tan 200 kW'a genişletilmesi.</li>
-              <li>Akaryakıt istasyonu ve market operasyonlarının, personelin ve aylık finansal raporlamanın denetimi.</li>
-              <li>İstasyon arazisinde 5 dönümlük lavanta bahçesinin kurulması; lavanta yağı ve diğer ürünlerin istasyon marketinde satışı.</li>
-            </ul>
           </div>
         </li>
         <li>
           <div class="when">2023</div>
           <div>
-            <h3><span lang="en">Project Lead, BP Station Infrastructure Renewal</span><span lang="tr">Proje Lideri, BP İstasyonu Altyapı Yenilemesi</span></h3>
-            <div class="org"><span lang="en">Arkoçlar · Çanakkale</span><span lang="tr">Arkoçlar · Çanakkale</span></div>
+            <h3><span lang="en">Project Lead, BP Station Infrastructure Renewal</span></h3>
+            <div class="org"><span lang="en">Arkoçlar · Çanakkale</span></div>
             <ul lang="en">
               <li>Complete renewal of the station's infrastructure: fuel tanks, pipelines, pumps and forecourt concrete.</li>
               <li>Installation of an electric vehicle charging station and its supporting infrastructure.</li>
               <li>Day-to-day operation of the station taken over on completion.</li>
-            </ul>
-            <ul lang="tr">
-              <li>İstasyonun tüm altyapısının yenilenmesi: yakıt tankları, boru hatları, pompalar ve saha betonu.</li>
-              <li>Elektrikli araçlar için şarj istasyonu ve altyapısının kurulması.</li>
-              <li>Tamamlanmasının ardından istasyon işletmesinin devralınması.</li>
             </ul>
           </div>
         </li>
         <li class="study">
           <div class="when">09/2021 – 04/2023</div>
           <div>
-            <h3><span lang="en">Graduate study</span><span lang="tr">Yüksek lisans</span></h3>
+            <h3><span lang="en">Graduate study</span></h3>
             <div class="org">Hult International Business School · Boston &amp; San Francisco</div>
             <p class="note" lang="en">Full-time M.S. International Business and M.S. Business Analytics. See <a href="#education">Education</a>.</p>
-            <p class="note" lang="tr">Tam zamanlı Uluslararası İşletme ve İş Analitiği yüksek lisansları. Bkz. <a href="#education">Eğitim</a>.</p>
           </div>
         </li>
         <li>
           <div class="when">05/2019 – 08/2021</div>
           <div>
-            <h3><span lang="en">Business Development Manager</span><span lang="tr">İş Geliştirme Müdürü</span></h3>
-            <div class="org"><span lang="en">Arkoçlar Construction, Tourism, Energy &amp; Oil · Çanakkale</span><span lang="tr">Arkoçlar İnşaat, Turizm, Enerji ve Petrol · Çanakkale</span></div>
+            <h3><span lang="en">Business Development Manager</span></h3>
+            <div class="org"><span lang="en">Arkoçlar Construction, Tourism, Energy &amp; Oil · Çanakkale</span></div>
             <ul lang="en">
               <li>Engineered, designed and led the build of a 100 kW on-grid solar energy system.</li>
               <li>Responsible manager of the LPG autogas station and filling facility: regular safety checks and reporting to the Chamber of Mechanical Engineers.</li>
               <li>Set long-term growth strategy; researched and qualified leads; negotiated contracts.</li>
               <li>Tracked weekly, monthly and quarterly sales metrics and kept the CRM up to date.</li>
-            </ul>
-            <ul lang="tr">
-              <li>100 kW'lık şebekeye bağlı güneş enerjisi sisteminin tasarımı ve kurulum yönetimi.</li>
-              <li>LPG otogaz istasyonu ve dolum tesisinin sorumlu müdürlüğü: düzenli güvenlik kontrolleri ve Makine Mühendisleri Odası süreçleri.</li>
-              <li>Uzun vadeli büyüme stratejisinin belirlenmesi; potansiyel müşteri araştırması ve sözleşme müzakereleri.</li>
-              <li>Haftalık, aylık ve çeyreklik satış metriklerinin takibi ve CRM yönetimi.</li>
             </ul>
           </div>
         </li>
@@ -546,29 +498,26 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
     <div class="wrap">
       <div class="head">
         <span class="sheet">A-05</span>
-        <h2><span lang="en">Education</span><span lang="tr">Eğitim</span></h2>
+        <h2><span lang="en">Education</span></h2>
       </div>
       <div class="cols">
         <div class="edu">
           <span class="label">09/2022 – 04/2023 · San Francisco</span>
-          <h3><span lang="en">M.S. Business Analytics (STEM)</span><span lang="tr">İş Analitiği Yüksek Lisansı (STEM)</span></h3>
+          <h3><span lang="en">M.S. Business Analytics (STEM)</span></h3>
           <div class="org">Hult International Business School</div>
           <p lang="en">SQL, Python, R, machine learning, Tableau, business analysis with structured data.</p>
-          <p lang="tr">SQL, Python, R, makine öğrenmesi, Tableau, yapılandırılmış veriyle iş analizi.</p>
         </div>
         <div class="edu">
           <span class="label">09/2021 – 08/2022 · Boston</span>
-          <h3><span lang="en">M.S. International Business</span><span lang="tr">Uluslararası İşletme Yüksek Lisansı</span></h3>
+          <h3><span lang="en">M.S. International Business</span></h3>
           <div class="org">Hult International Business School</div>
           <p lang="en">Strategy, finance, accounting, behavioral economics and decision making, marketing, project planning.</p>
-          <p lang="tr">Strateji, finans, muhasebe, davranışsal ekonomi ve karar alma, pazarlama, proje planlama.</p>
         </div>
         <div class="edu">
-          <span class="label"><span lang="en">2020 · Istanbul</span><span lang="tr">2020 · İstanbul</span></span>
-          <h3><span lang="en">B.A.Sc. Civil Engineering</span><span lang="tr">İnşaat Mühendisliği Lisansı</span></h3>
-          <div class="org"><span lang="en">Yeditepe University</span><span lang="tr">Yeditepe Üniversitesi</span></div>
+          <span class="label"><span lang="en">2020 · Istanbul</span></span>
+          <h3><span lang="en">B.A.Sc. Civil Engineering</span></h3>
+          <div class="org"><span lang="en">Yeditepe University</span></div>
           <p lang="en">Contributed to research on the fall-cone behavior of non-plastic silts, later published in <i>Géotechnique Letters</i>.</p>
-          <p lang="tr">Plastik olmayan siltlerde koni düşme davranışı üzerine araştırmada yer aldım; çalışma <i>Géotechnique Letters</i>'ta yayımlandı.</p>
         </div>
       </div>
     </div>
@@ -578,31 +527,31 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
     <div class="wrap">
       <div class="head">
         <span class="sheet">A-06</span>
-        <h2><span lang="en">Skills &amp; certifications</span><span lang="tr">Yetkinlikler ve sertifikalar</span></h2>
+        <h2><span lang="en">Skills &amp; certifications</span></h2>
       </div>
       <div class="skills">
         <div>
-          <span class="label"><span lang="en">Strategy &amp; business</span><span lang="tr">Strateji ve iş</span></span>
+          <span class="label"><span lang="en">Strategy &amp; business</span></span>
           <div class="chips">
-            <span lang="en">Business development</span><span lang="tr">İş geliştirme</span>
-            <span lang="en">Market research</span><span lang="tr">Pazar araştırması</span>
-            <span lang="en">Market entry</span><span lang="tr">Pazara giriş</span>
+            <span lang="en">Business development</span>
+            <span lang="en">Market research</span>
+            <span lang="en">Market entry</span>
             <span>Blue Ocean / ERRC</span><span>SWOT</span><span>BCG</span>
             <span>Business Model Canvas</span><span>5C / 4P</span>
-            <span lang="en">Contract negotiation</span><span lang="tr">Sözleşme müzakeresi</span>
+            <span lang="en">Contract negotiation</span>
             <span>PitchBook</span>
           </div>
         </div>
         <div>
-          <span class="label"><span lang="en">Data &amp; analytics</span><span lang="tr">Veri ve analitik</span></span>
+          <span class="label"><span lang="en">Data &amp; analytics</span></span>
           <div class="chips">
             <span>SQL (MySQL)</span><span>Python</span><span>R</span><span>Excel</span><span>Tableau</span>
             <span>Google Analytics</span><span>Adobe Analytics</span>
-            <span lang="en">Regression &amp; hypothesis tests</span><span lang="tr">Regresyon ve hipotez testleri</span>
+            <span lang="en">Regression &amp; hypothesis tests</span>
           </div>
         </div>
         <div>
-          <span class="label"><span lang="en">Engineering &amp; projects</span><span lang="tr">Mühendislik ve proje</span></span>
+          <span class="label"><span lang="en">Engineering &amp; projects</span></span>
           <div class="chips">
             <span>AutoCAD</span><span>IdeCAD</span><span>SAP2000</span><span>Fortran</span><span>Agile</span><span>Waterfall</span>
           </div>
@@ -614,8 +563,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
           <li><span>Google Data Analytics · Google Project Management · Google Digital Marketing &amp; E-commerce</span><span class="mono">Google</span></li>
           <li><span>Intermediate SQL Queries · SQL for Joining Data</span><span class="mono">10/2022</span></li>
           <li><span>Introduction to Python</span><span class="mono">02/2022</span></li>
-          <li><span lang="en">Site Chief Registration, Chamber of Civil Engineers, Çanakkale</span><span lang="tr">Şantiye Şefliği Belgesi, İnşaat Mühendisleri Odası Çanakkale</span><span class="mono">2022</span></li>
-          <li><span lang="en">LPG Autogas Station &amp; Filling Facility Responsible Manager</span><span lang="tr">LPG Otogaz İstasyonu ve Dolum Tesisi Sorumlu Müdürlük Belgesi</span><span class="mono">LPG</span></li>
+          <li><span lang="en">Site Chief Registration, Chamber of Civil Engineers, Çanakkale</span><span class="mono">2022</span></li>
+          <li><span lang="en">LPG Autogas Station &amp; Filling Facility Responsible Manager</span><span class="mono">LPG</span></li>
         </ul>
       </div>
     </div>
@@ -624,16 +573,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
   <section id="contact" class="contact">
     <div class="wrap grid">
       <div>
-        <span class="label">A-07 · <span lang="en">Contact</span><span lang="tr">İletişim</span></span>
-        <h2 style="margin-top:.8rem"><span lang="en">Let's talk about growth, markets and energy.</span><span lang="tr">Büyüme, pazarlar ve enerji üzerine konuşalım.</span></h2>
+        <span class="label">A-07 · <span lang="en">Contact</span></span>
+        <h2 style="margin-top:.8rem"><span lang="en">Open to conversations on growth, markets and energy.</span></h2>
         <div class="mail">
           <code id="email">alinadir017@gmail.com</code>
-          <button type="button" id="copy-email"><span lang="en">Copy email</span><span lang="tr">E-postayı kopyala</span></button>
+          <button type="button" id="copy-email"><span lang="en">Copy email</span></button>
           <a class="li" href="https://www.linkedin.com/in/ali-nadir-koç-141480117/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
       </div>
-      <p class="off" lang="en"><b>Say hello.</b> Whether it's energy, growth or a project you're thinking about, I'd be glad to hear from you.</p>
-      <p class="off" lang="tr"><b>Bir merhaba yeter.</b> Enerji, büyüme ya da aklındaki bir proje; ne olursa olsun haberleşmekten memnuniyet duyarım.</p>
+      <p class="off" lang="en"><b>Say hello.</b> Energy, growth or a project in mind: every message is welcome.</p>
     </div>
   </section>
 </main>
@@ -641,43 +589,25 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
 <footer>
   <div class="wrap">
     <span>© 2026 Ali Nadir Koç</span>
-    <span lang="en">Made in Çanakkale</span><span lang="tr">Çanakkale'den sevgilerle</span>
+    <span lang="en">Made in Çanakkale</span>
   </div>
 </footer>
 
 <script>
 (function(){
   var root = document.documentElement;
-  var btns = document.querySelectorAll('.lang button');
-  function setLang(l, save){
-    root.setAttribute('data-lang', l);
-    root.setAttribute('lang', l);
-    btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.set === l)); });
-    if (save) { try { localStorage.setItem('ank-lang', l); } catch(e) {} }
-  }
-  var initial = 'en';
-  var hash = (location.hash || '').replace('#','').toLowerCase();
-  if (hash === 'tr' || hash === 'en') { initial = hash; }
-  else {
-    var stored = null;
-    try { stored = localStorage.getItem('ank-lang'); } catch(e) {}
-    if (stored === 'tr' || stored === 'en') initial = stored;
-    else if ((navigator.language || '').toLowerCase().indexOf('tr') === 0) initial = 'tr';
-  }
-  setLang(initial, false);
   var heroEl = document.querySelector('.hero');
   function onScroll(){ var lim = heroEl ? heroEl.offsetHeight - 60 : 200; root.classList.toggle('scrolled', window.scrollY > lim); }
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
-  btns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.dataset.set, true); }); });
 
   var copyBtn = document.getElementById('copy-email');
   var email = document.getElementById('email');
   copyBtn.addEventListener('click', function(){
     var text = email.textContent.trim();
     var done = function(){
-      var en = copyBtn.querySelector('[lang="en"]'), t = copyBtn.querySelector('[lang="tr"]');
-      en.textContent = 'Copied'; t.textContent = 'Kopyalandı';
-      setTimeout(function(){ en.textContent = 'Copy email'; t.textContent = 'E-postayı kopyala'; }, 1800);
+      var en = copyBtn.querySelector('[lang="en"]') || copyBtn;
+      en.textContent = 'Copied';
+      setTimeout(function(){ en.textContent = 'Copy email'; }, 1800);
     };
     var select = function(){
       var r = document.createRange(); r.selectNodeContents(email);
